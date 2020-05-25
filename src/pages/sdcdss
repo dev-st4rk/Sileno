@@ -1,0 +1,58 @@
+<View style={styles.cardImage}>
+    <TouchableHighlight onPress={()=>{}} style={styles.listItem} activeOpacity={0.8} 
+    underlayColor="#61657B">
+        <View style={styles.containerImageOptions}>
+            <Text style={styles.TextImageOptions}>Tirar Foto</Text>
+        </View>
+    </TouchableHighlight>
+    <TouchableHighlight onPress={()=>{}} style={styles.listItem} activeOpacity={0.8} 
+    underlayColor="#61657B">
+        <View style={styles.containerImageOptions}>
+            <Text style={styles.TextImageOptions}>Selecionar da Galeria</Text>
+        </View>
+    </TouchableHighlight>
+    <TouchableHighlight onPress={()=>{}} style={styles.listItem} activeOpacity={0.8} 
+    underlayColor="#61657B">
+        <View style={styles.containerImageOptions}>
+            <Text style={styles.TextImageOptions}>Visualizar Foto</Text>
+        </View>
+     </TouchableHighlight>
+    <TouchableHighlight onPress={()=> setCount(null)} style={styles.listItem} activeOpacity={0.8} 
+    underlayColor="#61657B">
+        <View style={styles.containerImageOptions}>
+            <Text style={styles.TextImageOptions}>Cancelar</Text>
+        </View>
+    </TouchableHighlight>
+</View>
+
+cardImage: {
+        position: 'absolute',
+        width: 230,
+        height: 210,
+        alignSelf: 'center',
+        backgroundColor: '#363B54',
+        shadowColor: '#000',
+        shadowOpacity: 0.8,
+        shadowOffset: {
+            width: 4,
+            height: 4
+        },
+        elevation: 7
+    },
+    listItem: {
+        width: '100%',
+        height: '25%',
+
+    },
+    containerImageOptions: {
+        flex: 1,
+        paddingHorizontal: 20,
+        flexDirection: 'row',
+        alignItems: 'center',
+
+    },
+    TextImageOptions: {
+        color: '#FFFFFF',
+        fontSize: 18,
+        opacity: 0.7
+    },

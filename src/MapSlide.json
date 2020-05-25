@@ -1,0 +1,27 @@
+{
+    "card": {
+        "images": "https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "nome": "Avalon Hollywood.",
+        "desc": "2mi, 4 stars"
+    },
+    "card": {
+        "images": "https://images.pexels.com/photos/2034851/pexels-photo-2034851.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "nome": "Avalon Hollywood.",
+        "desc": "2mi, 4 stars"
+    },
+    "card": {
+        "images": "https://images.pexels.com/photos/274192/pexels-photo-274192.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "nome": "Avalon Hollywood.",
+        "desc": "2mi, 4 stars"
+    },
+    "card": {
+        "images": "https://images.pexels.com/photos/1601775/pexels-photo-1601775.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "nome": "Avalon Hollywood.",
+        "desc": "2mi, 4 stars"
+    },
+    "card": {
+        "images": "https://images.pexels.com/photos/261043/pexels-photo-261043.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "nome": "Avalon Hollywood.",
+        "desc": "2mi, 4 stars"
+    }    
+}

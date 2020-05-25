@@ -1,0 +1,52 @@
+{
+    "colorElements":{
+        "paletaApp":{
+            "preto":"#f5f5f5",
+            "pretoClaro":"#858383",
+            "cinza":"#B8B8B8",
+            "cinzaClaro":"#404040",
+            "branco":"#2E2E2E",
+            "fundoNoite":"#404040",
+            "primariaTextosExternos":"#FFFFFF",
+            "secundariaTextosExternos":"#E8E8E8"
+        },
+        "telaNoite":{
+            "titulo":"#EBEBEB",
+            "subtitulo":"#ACABAB"
+        },
+        "paletaTabbar":{
+            "corDeFundo":"#2E2E2E",
+            "itemAtivo":"#FFFFFF",
+            "itemInativo":"#adadad"
+        },
+        "mapa":{
+            "cor":"mapbox://styles/qun4ntumt/ck390137d3lta1dnvs5u9428r"
+        }
+    },
+    "tabbar":{
+        "config":{
+            "alturaTabbar": 60,
+            "tamanhoFonte":10,
+            "tipoFonte":"normal",
+            "mostrarLabels":true,
+            "elevation":5,
+            "espacoBrancoEmVolta":"absolute",
+            "bordaAcimaTabbar":"transparent",  
+            "opacidadeInativo":0.3,
+            "opacidadeAtivo":1,
+            "tamanhoIcones": 25,
+            "tamanhoLogo":30,
+            "borderTopRadius":15,
+            "iconePerfil":{
+                "tamanhoImagemPerfil":30,
+                "radius":30,
+                "border":1
+            },
+            "stackNavigatorConfigs":{
+                "cabecalhoApp":"none",
+                "mode":"card",
+                "gesturesEnabled":false
+            }
+        }       
+    }
+}
