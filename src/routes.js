@@ -8,10 +8,12 @@ import { createStackNavigator } from 'react-navigation-stack';
 
 import { MaterialIcons } from '@expo/vector-icons';
 
+import Register from './pages/Register';
+import Verification from './pages/Verification';
+
 import Main from './pages/Main';
 import Profile from './pages/Profile';
 import Friends from './pages/FriendList';
-import Login from './pages/Login';
 
 import QrCode from './pages/friendQr';
 import White from './pages/WhitePage';
@@ -186,7 +188,8 @@ const DefaultStack = createStackNavigator(
     //cria um navegador do tipo stack
     //gerencia as rotas quando o usuário iniciar o aplicativo
     {
-        Login: Login,
+        Register: Register,
+        Verification: Verification,
         Main: Routes
     },
     {

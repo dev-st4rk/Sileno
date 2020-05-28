@@ -1,5 +1,6 @@
 import React, { useState }from 'react';
-import { View, Image, TouchableOpacity, StyleSheet, Text, ScrollView, TouchableHighlight, Modal, TouchableOpacityBase } from 'react-native';
+import { View, Image, TouchableOpacity, StyleSheet, Text, ScrollView,
+    TouchableHighlight, Modal, TouchableOpacityBase } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 
 import SearchBar from '../components/searchInput';
@@ -48,33 +49,33 @@ function Profile({ navigation }){
                         </TouchableOpacity>
                     </View>
                 </View>
-                    <Modal animationType="slide" transparent={true} visible={modalVisible}>
-                        <View style={styles.cardImage}>
-                            <View style={styles.modalView}>
-                                {/* ////////////////////Tirar Foto//////////////////// */}
-                                <TouchableHighlight onPress={()=>{}} style={styles.listItem} activeOpacity={0.8} 
-                                underlayColor="#61657B">
-                                    <View style={styles.containerImageOptions}>
-                                        <Text style={styles.TextImageOptions}>Tirar Foto</Text>
-                                    </View>
-                                </TouchableHighlight>
-                                {/* ////////////////////Selecionar da Galeria//////////////////// */}
-                                <TouchableHighlight onPress={()=>{}} style={styles.listItem} activeOpacity={0.8} 
-                                underlayColor="#61657B">
-                                    <View style={styles.containerImageOptions}>
-                                        <Text style={styles.TextImageOptions}>Selecionar da Galeria</Text>
-                                    </View>
-                                </TouchableHighlight>
-                                {/* ////////////////////Cancelar//////////////////// */}
-                                <TouchableHighlight onPress={() => {setModalVisible(!modalVisible);}}
-                                style={styles.listItem} activeOpacity={0.8} underlayColor="#61657B">
-                                    <View style={styles.containerImageOptions}>
-                                        <Text style={styles.TextImageOptions}>Cancelar</Text>
-                                    </View>
-                                </TouchableHighlight>
-                            </View>
+                <Modal animationType="slide" transparent={true} visible={modalVisible}>
+                    <View style={styles.cardImage}>
+                        <View style={styles.modalView}>
+                            {/* ////////////////////Tirar Foto//////////////////// */}
+                            <TouchableHighlight onPress={()=>{}} style={styles.listItem} activeOpacity={0.8} 
+                            underlayColor="#61657B">
+                                <View style={styles.containerImageOptions}>
+                                    <Text style={styles.TextImageOptions}>Tirar Foto</Text>
+                                </View>
+                            </TouchableHighlight>
+                            {/* ////////////////////Selecionar da Galeria//////////////////// */}
+                            <TouchableHighlight onPress={()=>{}} style={styles.listItem} activeOpacity={0.8} 
+                            underlayColor="#61657B">
+                                <View style={styles.containerImageOptions}>
+                                    <Text style={styles.TextImageOptions}>Selecionar da Galeria</Text>
+                                </View>
+                            </TouchableHighlight>
+                            {/* ////////////////////Cancelar//////////////////// */}
+                            <TouchableHighlight onPress={() => {setModalVisible(!modalVisible);}}
+                            style={styles.listItem} activeOpacity={0.8} underlayColor="#61657B">
+                                <View style={styles.containerImageOptions}>
+                                    <Text style={styles.TextImageOptions}>Cancelar</Text>
+                                </View>
+                            </TouchableHighlight>
                         </View>
-                    </Modal>
+                    </View>
+                </Modal>
                 <View style={styles.card}>
                     <View style={styles.searchContainer}>
                         <SearchBar/>
@@ -183,22 +184,22 @@ const styles = StyleSheet.create({
         marginTop: 22,
     },
     modalView: {
-    width: 230,
-    height: 175,
-    bottom: 154,
-    backgroundColor: '#363B54',
-    borderRadius: 15,
-    padding: 10,
-    justifyContent: 'space-around',
-    alignItems: "center",
-    shadowColor: "#000",
-    shadowOffset: {
-    width: 0,
-    height: 2
+        width: 230,
+        height: 175,
+        bottom: 154,
+        backgroundColor: '#363B54',
+        borderRadius: 15,
+        padding: 10,
+        justifyContent: 'space-around',
+        alignItems: "center",
+        shadowColor: "#000",
+        shadowOffset: {
+        width: 0,
+        height: 2
     },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-    elevation: 5
+        shadowOpacity: 0.25,
+        shadowRadius: 3.84,
+        elevation: 5
     },
     listItem: {
         width: '100%',
