@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, TextInput, TouchableOpacity, KeyboardAvoidingView,  } from 'react-native';
+import backleno from '../services/backlenoService';
 
 import InputComponent from '../components/Input';
 
@@ -7,7 +8,19 @@ export default function Register({navigation}) {
     // create state hidden or visible for view using react hooks. Basically you need pass two objects, the first object is 
     //the final result or the response of your call, and the last object is where you pass the conditions, then useState for
     //literally use the state, and the initial state of your component
-const [alertVisible, setAlertVisible] = useState(null); 
+
+    const [data, setData] = useState(null);
+
+    useEffect(() => {
+        async function fetchData() {
+            backleno.get('/usuarios').then(({data}) => {
+                setData(data);
+            });
+        }
+        fetchData();
+    }, [])
+
+    const [alertVisible, setAlertVisible] = useState(null); 
 
     return (
         <View style={styles.Content}>
