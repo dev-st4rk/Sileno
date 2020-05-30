@@ -1,13 +1,29 @@
-import React, { useState } from 'react';
-import { View, Text, StyleSheet, TextInput, TouchableOpacity, KeyboardAvoidingView,  } from 'react-native';
+import React, { useState, useEffect  } from 'react';
+import axios from 'axios';
+import { View, Text, StyleSheet, TouchableOpacity, KeyboardAvoidingView, Picker } from 'react-native';
+import { MaterialIcons } from '@expo/vector-icons';
 
 import InputComponent from '../components/Input';
 
+
+
 export default function Register({navigation}) {
+    const [countries, setCountries] = useState([]);
+    useEffect(() => {
+        axios.get('https://country-cities.herokuapp.com/api/v0.1/countries/codes')
+            .then(res=>{
+                setCountries(res.data.data)
+            })
+            .catch(err=>{
+                console.log(err)
+            })
+        }, [])
+    const [selectedValue, setSelectedValue] = useState(null);
+    const [number, setNumber] = useState('');
+    const [alertVisible, setAlertVisible] = useState(null);
     // create state hidden or visible for view using react hooks. Basically you need pass two objects, the first object is 
     //the final result or the response of your call, and the last object is where you pass the conditions, then useState for
     //literally use the state, and the initial state of your component
-const [alertVisible, setAlertVisible] = useState(null); 
 
     return (
         <View style={styles.Content}>
@@ -17,20 +33,44 @@ const [alertVisible, setAlertVisible] = useState(null);
                     O Sileno enviará um SMS para verificar o seu número de telefone. 
                     Insira o código de país e o número do seu telefone:
                 </Text>
-                <View style={{marginTop: '12%'}}>  
-                        <InputComponent/>
-                    </View>
+                <View style={styles.picker}>
+                <Picker
+                    mode='dialog'
+                    selectedValue={selectedValue}
+                    style={{ height: 20, width: '100%', color: '#B1B1B1'}}
+                    itemStyle={{color: '#B1B1B1'}}
+                    onValueChange={(itemValue) => setSelectedValue(itemValue)}
+                >
+                    {countries.map(country => (
+                        <Picker.Item label={country.name} value={country.dial_code} />
+                    ))}
+                </Picker>  
+                <MaterialIcons name="expand-more" size={22} color="#A7A7A7" style={styles.iconPicker}/>
+                </View>
                 <View style={styles.containerTwoInputs}>
-                    <View style={{width: '20%'}}>  
-                        <InputComponent/>
+                    <View style={styles.fakeInput}>
+                        <Text style={styles.fakePlaceholder}>
+                            {selectedValue}
+                        </Text>
                     </View>
-                    <View style={{width: '79%'}}>  
-                        <InputComponent/>
+                    <View style={{width: '77%'}}>  
+                        <InputComponent 
+                        placeholderTextColor="#FFF" 
+                        autoCapitalize="none" //options: characters, words, sentences and none.
+                        keyboardType="number-pad" 
+                        keyboardAppearance="dark" // IOS only
+                        selectionColor="#fff" //color of cursor
+                        autoCorrect={false}
+                        textContentType="telephoneNumber"
+                        dataDetectorTypes='phoneNumber'
+                        value={number}
+                        onChangeText={setNumber}
+                        />
                     </View>
                 </View>
             </KeyboardAvoidingView>
             <View style={styles.containerButton}>
-                <TouchableOpacity onPress={() => { setAlertVisible(true); }}>
+                <TouchableOpacity onPress={() => {setAlertVisible(true);}}>
                     <View style={styles.button}>
                         <Text style={{color: '#FFF', fontSize: 16}}>VERIFICAR</Text>
                     </View>
@@ -46,7 +86,7 @@ const [alertVisible, setAlertVisible] = useState(null);
                     <View style={styles.filter}/>
                     <View style={styles.alertCard}>
                         <Text style={styles.textCard}>Nós verificaremos o número:</Text>
-                        <Text style={[styles.textCard, {color: '#FFF'}]}>+55 13 974154802</Text>
+                        <Text style={[styles.textCard, {color: '#FFF'}]}>{selectedValue+' '+number}</Text>
                         <View>
                             <Text style={styles.textCard}>Este número está correto, ou deseja editar?</Text>
                         </View>
@@ -87,10 +127,38 @@ const styles = StyleSheet.create({
         fontSize: 18,
         marginTop: '12%'
     },
+    picker: {
+        width: '100%',
+        height: 48,
+        backgroundColor: '#191824',
+        borderRadius: 5,
+        fontSize: 20,
+        color: '#C1C1C1',
+        padding: 14,
+        marginTop: '12%',
+    },
+    iconPicker: {
+        position: 'absolute',
+        left: '92%',
+        top: 12
+    },
     containerTwoInputs:{
         flexDirection: 'row',
         justifyContent: 'space-between',
         marginTop: '8%'
+    },
+    fakeInput: {
+        width: '22%',
+        height: 48,
+        backgroundColor: '#191824',
+        borderRadius: 5,
+        fontSize: 20,
+        color: '#C1C1C1',
+        padding: 14
+    },
+    fakePlaceholder:{
+        fontSize: 14,
+        color: '#C1C1C1',
     },
     containerButton: {
         top: '13%',

@@ -25,7 +25,16 @@ const [alertVisible, setAlertVisible] = useState(null);
                 </TouchableOpacity>
                 <Text style={[styles.topDesc, {marginBottom: 6, marginTop: '8%'}]}>Digite o código de 6 dígitos</Text>
                 <View>
-                    <InputComponent selectionColor="#fff"/>
+                    <InputComponent 
+                    placeholderTextColor="#FFF" 
+                    autoCapitalize="none" //options: characters, words, sentences and none.
+                    keyboardType="number-pad" 
+                    keyboardAppearance="dark" // IOS only
+                    selectionColor="#fff" //color of cursor
+                    autoCorrect={false}
+                    textContentType="telephoneNumber"
+                    dataDetectorTypes='phoneNumber'
+                    />
                     <TouchableOpacity style={styles.buttonInput}>
                         <MaterialIcons name="arrow-forward" size={24} color="#A7A7A7"/>
                     </TouchableOpacity>
