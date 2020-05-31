@@ -1,50 +1,84 @@
-import React, { useState, useEffect } from 'react';
-import { Text, View, TouchableOpacity } from 'react-native';
-import { Camera } from 'expo-camera';
+import React, { useState } from 'react';
+import { View, Text, StyleSheet, TextInput, TouchableOpacity, KeyboardAvoidingView,  } from 'react-native';
+import { MaterialIcons } from '@expo/vector-icons';
 
-export default function App() {
-  const [hasPermission, setHasPermission] = useState(null);
-  const [type, setType] = useState(Camera.Constants.Type.back);
+import InputComponent from '../../components/Input';
 
-  useEffect(() => {
-    (async () => {
-      const { status } = await Camera.requestPermissionsAsync();
-      setHasPermission(status === 'granted');
-    })();
-  }, []);
+export default function Register({navigation}) {
+    // create state hidden or visible for view using react hooks. Basically you need pass two objects, the first object is 
+    //the final result or the response of your call, and the last object is where you pass the conditions, then useState for
+    //literally use the state, and the initial state of your component
+const [alertVisible, setAlertVisible] = useState(null); 
 
-  if (hasPermission === null) {
-    return <View />;
-  }
-  if (hasPermission === false) {
-    return <Text>No access to camera</Text>;
-  }
-  return (
-    <View style={{ flex: 1 }}>
-      <Camera style={{ flex: 1 }} type={type}>
-        <View
-          style={{
-            flex: 1,
-            backgroundColor: 'transparent',
-            flexDirection: 'row',
-          }}>
-          <TouchableOpacity
-            style={{
-              flex: 0.1,
-              alignSelf: 'flex-end',
-              alignItems: 'center',
-            }}
-            onPress={() => {
-              setType(
-                type === Camera.Constants.Type.back
-                  ? Camera.Constants.Type.front
-                  : Camera.Constants.Type.back
-              );
-            }}>
-            <Text style={{ fontSize: 18, marginBottom: 10, color: 'white' }}> Flip </Text>
-          </TouchableOpacity>
+    return (
+        <View style={styles.Content}>
+            <KeyboardAvoidingView style={styles.containerForm} behavior="position">
+                <View style={styles.containerLogo}/>
+                <Text style={[styles.topDesc, {marginTop: '12%'}]}>
+                Aguardando para detectar automaticamente</Text>
+                <View style={{flexDirection: 'row'}}>
+                    <Text style={styles.topDesc}> um SMS enviado para</Text>
+                    <Text style={styles.topDesc}> +55 13 974154802. </Text>
+                </View>
+                <TouchableOpacity>
+                    <Text style={[styles.topDesc, {color: '#3ACCE1'}]}>Número errado?</Text>
+                </TouchableOpacity>
+                <Text style={[styles.topDesc, {marginBottom: 6, marginTop: '8%'}]}>Digite o código de 6 dígitos</Text>
+                <View>
+                    <InputComponent 
+                    autoCapitalize="none" //options: characters, words, sentences and none.
+                    keyboardType="number-pad" 
+                    keyboardAppearance="dark" // IOS only
+                    selectionColor="#fff" //color of cursor
+                    autoCorrect={false}
+                    maxLength={6}
+                    />
+                    <TouchableOpacity  onPress={()=>{ navigation.navigate('setProfile'); }} style={styles.buttonInput}>
+                        <MaterialIcons name="arrow-forward" size={24} color="#A7A7A7"/>
+                    </TouchableOpacity>
+                </View>
+            </KeyboardAvoidingView>
+            <View style={{width: '80%',flexDirection: 'row', top: '26%', justifyContent: 'space-between'}}>
+                <TouchableOpacity style={{flexDirection: 'row'}}>
+                    <MaterialIcons name="message" size={22} color="#A7A7A7"/>
+                    <Text style={[styles.topDesc, {marginLeft: 10}]}>Reenviar SMS</Text>
+                </TouchableOpacity>
+                <Text style={[styles.topDesc, {fontSize: 14}]}>1:10</Text>
+            </View>
         </View>
-      </Camera>
-    </View>
-  );
+    );
 }
+
+const styles = StyleSheet.create({
+    Content: {
+        flex: 1,
+        backgroundColor: '#272B35',
+        alignItems: 'center',
+        flexDirection: 'column'
+    },
+    containerForm: {
+        width: '80%',
+        top: '10%',
+    },
+    containerLogo: {
+        backgroundColor: '#000',
+        width: 130,
+        height: 130,
+        alignSelf: 'center'
+    },
+    topDesc: {
+        color: '#A7A7A7',
+        fontSize: 16,
+    },
+    buttonInput: {
+        position: 'absolute',
+        height: 48,
+        width: 62,
+        alignSelf: 'flex-end',
+        borderTopRightRadius: 5,
+        borderBottomRightRadius: 5,
+        backgroundColor: '#111',
+        justifyContent: 'space-around',
+        alignItems: 'center'
+    }
+});

@@ -5,7 +5,7 @@ import * as ImagePicker from 'expo-image-picker';
 
 import InputComponent from '../../components/Input';
 
-const SetProfile = () => {
+export default function SetProfile({navigation}) {
 	const [name, setName] = useState(''); //state for inputName
 	const [number, setNumber] = useState(25);
 	const [modalVisible, setModalVisible] = useState(false); //state to show or hidden modal
@@ -69,7 +69,7 @@ const SetProfile = () => {
 				/>
 				<Text style={styles.countInput}>{number}</Text>
 				<TouchableOpacity onPress={()=>{
-				navigation.navigate('setProfile');}} style={styles.buttonInput}>
+				navigation.navigate('Main');}} style={styles.buttonInput}>
 					<MaterialIcons name="arrow-forward" size={24} color="#A7A7A7"/>
 				</TouchableOpacity>
 			</View>
@@ -103,8 +103,6 @@ const SetProfile = () => {
 		</View>
 	)
 }
-
-export default SetProfile
 
 const styles = StyleSheet.create({
 	Content: {

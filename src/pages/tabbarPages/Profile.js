@@ -1,7 +1,8 @@
-import React, { useState }from 'react';
+import React, { useState, useEffect }from 'react';
 import { View, Image, TouchableOpacity, StyleSheet, Text, ScrollView,
     TouchableHighlight, Modal, TouchableOpacityBase } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
+import * as Contacts from 'expo-contacts';
 
 import SearchBar from '../../components/searchInput';
 import Friend from '../../components/friendList';
@@ -9,6 +10,20 @@ import Friend from '../../components/friendList';
 import BackgroundImage from '../../assets/Background.png';
 
 function Profile({ navigation }){
+    const [contacts, setContacts] = useState([]);
+    
+    useEffect(() => {
+        (async () => {
+        const { status } = await Contacts.requestPermissionsAsync();
+        if (status === 'granted') {
+            const data = await Contacts.getContactsAsync({
+            fields: [Contacts.Fields.Emails],
+            });
+            setContacts(data.data);
+        }
+        })();
+    }, []);
+
     const [modalVisible, setModalVisible] = useState(false);
 
     return <View style={styles.Content}> 
@@ -82,11 +97,11 @@ function Profile({ navigation }){
                     </View>
                     <View style={styles.containerScroll}>
                         <ScrollView >
-                            <Friend/>
-                            <Friend/>
-                            <Friend/>
-                            <Friend/>
-                            <Friend/>
+                            {
+                                contacts.map(contact=>(
+                                    <Friend name={contact.name}/>
+                                ))
+                            }
                         </ScrollView>
                     </View> 
                 </View>

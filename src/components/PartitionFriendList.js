@@ -2,7 +2,6 @@ import React from 'react';
 import { View, Text, StyleSheet} from 'react-native';
 
 
-import ItemFriend from '../components/FriendListItem';
 
 // import { Container } from './styles';
 
@@ -11,9 +10,7 @@ const PartitionFriendList = () => {
         <View style={styles.containerPartition}>
         <View style={styles.letterContainerList}>
             <Text style={{fontSize: 16, color: '#707070'}}>A</Text>
-            </View>
-            <ItemFriend/>
-            <ItemFriend/>
+        </View>
         </View>
     );
 }

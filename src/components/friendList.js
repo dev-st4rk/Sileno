@@ -1,25 +1,23 @@
 import React, { Component } from 'react'
 import { Text, View, StyleSheet, Image, TouchableHighlight } from 'react-native'
 
-export default class friendList extends Component {
-    render() {
-        return (
-            <TouchableHighlight 
-            onPress={()=>{}} 
-            style={{ paddingVertical: 16 }}   
-            activeOpacity={0.8}
-            underlayColor="#363B54">
-                <View style={styles.friendItem}>
-                    <Image style={styles.friendAvatar} source={{ uri: 'https://www.thispersondoesnotexist.com/image' }} />
-                    <View style={styles.textContainer}>
-                        <Text style={styles.friendName}>Jessica Hide</Text>
-                        <Text style={styles.friendDesc}>Architect, New York</Text>
-                    </View>
-                    <Text style={styles.friendStatus}>Online</Text>
+export default function friendList(props){
+    return (
+        <TouchableHighlight 
+        onPress={()=>{}} 
+        style={{ paddingVertical: 16 }}   
+        activeOpacity={0.8}
+        underlayColor="#363B54">
+            <View style={styles.friendItem}>
+                <Image style={styles.friendAvatar} source={{ uri: 'https://www.thispersondoesnotexist.com/image' }} />
+                <View style={styles.textContainer}>
+                    <Text style={styles.friendName}>{props.name}</Text>
+                    <Text style={styles.friendDesc}>{props.description}</Text>
                 </View>
-            </TouchableHighlight>
-        )
-    }
+                <Text style={styles.friendStatus}>Online</Text>
+            </View>
+        </TouchableHighlight>
+    )
 }
 
 const styles = StyleSheet.create({

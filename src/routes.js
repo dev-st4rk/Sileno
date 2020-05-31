@@ -189,7 +189,8 @@ const RegisterProcess = createStackNavigator(
     {
         Register: Register,
         Verification: Verification,
-        setProfile: setProfile
+        setProfile: setProfile,
+        Main:Routes,
     },
     {
         headerMode: tabbarConfigs.tabbar.config.stackNavigatorConfigs.cabecalhoApp, // retira o header do aplicativo - uma parte branca que não usamos
@@ -207,7 +208,7 @@ const DefaultStack = createStackNavigator(
     //cria um navegador do tipo stack
     //gerencia as rotas quando o usuário iniciar o aplicativo
     {
-        Register: RegisterProcess,
+        // Register: RegisterProcess,
         Main: Routes
     },
     {
