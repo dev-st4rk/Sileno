@@ -1,11 +1,10 @@
 import React, { useState, useEffect  } from 'react';
 import axios from 'axios';
-import { View, Text, StyleSheet, TouchableOpacity, KeyboardAvoidingView, Picker } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, KeyboardAvoidingView, Picker }
+from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 
-import InputComponent from '../components/Input';
-
-
+import InputComponent from '../../components/Input';
 
 export default function Register({navigation}) {
     const [countries, setCountries] = useState([]);

@@ -5,10 +5,10 @@
     import { TouchableHighlight, TextInput } from 'react-native-gesture-handler';
     import { MaterialIcons } from '@expo/vector-icons';
 
-    import SearchBar from '../components/searchInput';
+    import SearchBar from '../../components/searchInput';
 
-    import Mapstyle from '../MapStyle.json';
-    import MapSlide from '../MapSlide.json';
+    import Mapstyle from '../../MapStyle.json';
+    import MapSlide from '../../MapSlide.json';
 
     const images = [
         'https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',

@@ -45,7 +45,7 @@
             "stackNavigatorConfigs":{
                 "cabecalhoApp":"none",
                 "mode":"card",
-                "gesturesEnabled":false
+                "gestureEnabled":false
             }
         }       
     }

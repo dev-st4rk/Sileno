@@ -8,16 +8,16 @@ import { createStackNavigator } from 'react-navigation-stack';
 
 import { MaterialIcons } from '@expo/vector-icons';
 
-import Register from './pages/Register';
-import Verification from './pages/Verification';
+import Register from './pages/RegisterProcess/Register';
+import Verification from './pages/RegisterProcess/Verification';
+import setProfile from './pages/RegisterProcess/SetProfile';
 
-import Main from './pages/Main';
-import Profile from './pages/Profile';
+import Main from './pages/tabbarPages/Main';
+import Profile from './pages/tabbarPages/Profile';
 import Friends from './pages/FriendList';
 
 import QrCode from './pages/friendQr';
 import White from './pages/WhitePage';
-import Roll from './pages/routeTest';
 
 import tabbarConfigs from './components/styleElements.json';
 
@@ -106,10 +106,10 @@ const Routes = createBottomTabNavigator({
     Night: {
         screen: createStackNavigator(
             {
-                Roll
+                Friends
             },
             {
-                initialRouteName: 'Roll',
+                initialRouteName: 'Friends',
                 headerMode:
                     tabbarConfigs.tabbar.config.stackNavigatorConfigs.cabecalhoApp, // retira o header do aplicativo - uma parte branca que não usamos
                     mode: tabbarConfigs.tabbar.config.stackNavigatorConfigs.mode, // modo de transição do app. O default sempre é card
@@ -183,13 +183,31 @@ const Routes = createBottomTabNavigator({
     },
 );
 
-
-const DefaultStack = createStackNavigator(
+const RegisterProcess = createStackNavigator(
     //cria um navegador do tipo stack
     //gerencia as rotas quando o usuário iniciar o aplicativo
     {
         Register: Register,
         Verification: Verification,
+        setProfile: setProfile
+    },
+    {
+        headerMode: tabbarConfigs.tabbar.config.stackNavigatorConfigs.cabecalhoApp, // retira o header do aplicativo - uma parte branca que não usamos
+        mode: tabbarConfigs.tabbar.config.stackNavigatorConfigs.mode, // modo de transição do app. O default sempre é card
+        navigationOptions: {
+            gesturesEnabled:
+            tabbarConfigs.tabbar.config.stackNavigatorConfigs.gesturesEnabled, //  Se você pode usar gestos para descartar essa tela. O padrão é true no iOS, false no Android.
+            },
+        },
+    );
+
+
+
+const DefaultStack = createStackNavigator(
+    //cria um navegador do tipo stack
+    //gerencia as rotas quando o usuário iniciar o aplicativo
+    {
+        Register: RegisterProcess,
         Main: Routes
     },
     {

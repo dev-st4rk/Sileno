@@ -4,7 +4,7 @@ import { StyleSheet, TextInput } from 'react-native'
 const Input = (props) => {
     return (
             <TextInput
-                style={styles.input}
+                style={[styles.input, props.padding]}
                 placeholderTextColor= {props.placeholderTextColor}
                 autoCapitalize= {props.autoCapitalize} //options: characters, words, sentences and none.
                 keyboardType= {props.keyboardType}
@@ -15,7 +15,8 @@ const Input = (props) => {
                 dataDetectorTypes={props.dataDetectorTypes}
                 defaultValue={props.defaultValue}
                 value={props.value}
-                onChangeText={props.onChangeText} 
+                onChangeText={props.onChangeText}
+                maxLength={props.maxLength}
             />
     )
 }
@@ -30,6 +31,6 @@ const styles = StyleSheet.create({
         borderRadius: 5,
         fontSize: 16,
         color: '#C1C1C1',
-        padding: 14
+        padding: 14,
     }
 });

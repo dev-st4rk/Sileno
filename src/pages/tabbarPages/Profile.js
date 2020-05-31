@@ -3,10 +3,10 @@ import { View, Image, TouchableOpacity, StyleSheet, Text, ScrollView,
     TouchableHighlight, Modal, TouchableOpacityBase } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 
-import SearchBar from '../components/searchInput';
-import Friend from '../components/friendList';
+import SearchBar from '../../components/searchInput';
+import Friend from '../../components/friendList';
 
-import BackgroundImage from '../assets/Background.png';
+import BackgroundImage from '../../assets/Background.png';
 
 function Profile({ navigation }){
     const [modalVisible, setModalVisible] = useState(false);
