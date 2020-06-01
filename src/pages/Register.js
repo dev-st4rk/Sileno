@@ -1,25 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, TextInput, TouchableOpacity, KeyboardAvoidingView,  } from 'react-native';
 import backleno from '../services/backlenoService';
+import * as SMS from 'expo-sms';
 
 import InputComponent from '../components/Input';
 
 export default function Register({navigation}) {
-    // create state hidden or visible for view using react hooks. Basically you need pass two objects, the first object is 
-    //the final result or the response of your call, and the last object is where you pass the conditions, then useState for
-    //literally use the state, and the initial state of your component
+    function sendSMS(phone, message) {
+        SMS.sendSMSAsync(phone, message);
+    }
 
-    const [data, setData] = useState(null);
+    const [usersData, setUsersData] = useState(null);
 
     useEffect(() => {
         async function fetchData() {
             backleno.get('/usuarios').then(({data}) => {
-                setData(data);
+                setUsersData(data);
             });
         }
         fetchData();
     }, [])
 
+    // create state hidden or visible for view using react hooks. Basically you need pass two objects, the first object is 
+    //the final result or the response of your call, and the last object is where you pass the conditions, then useState for
+    //literally use the state, and the initial state of your component
     const [alertVisible, setAlertVisible] = useState(null); 
 
     return (
@@ -67,7 +71,7 @@ export default function Register({navigation}) {
                             <TouchableOpacity  onPress={() => { setAlertVisible(false); }} style={{padding: 3}}>
                                 <Text style={[styles.textCard, {color: '#3ACCE1', fontWeight: 'bold'}]}>EDITAR</Text>
                             </TouchableOpacity>
-                            <TouchableOpacity onPress={()=>{ navigation.navigate('Verification'); }}  style={{padding: 3}}>
+                            <TouchableOpacity onPress={()=>{ sendSMS('+55 13 974154802', 'teste') }}  style={{padding: 3}}>
                                 <Text style={[styles.textCard, {color: '#3ACCE1', fontWeight: 'bold'}]}>OK</Text>
                             </TouchableOpacity>
                         </View>
