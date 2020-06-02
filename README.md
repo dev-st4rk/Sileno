@@ -110,7 +110,8 @@ npm install expo-cli --global
 
 ## Contato
 Caso voce deseje entrar em contato com um desenvolvedor, voce pode utilzar qualquer um dos seguintes e-mails:
-Bruno | bruno.trigueiro@outlook.com
-Thiago | thiagoleao.dev@gmail.com
-Vitor | vitorberto.dev@gmail.com
+
+Bruno - bruno.trigueiro@outlook.com
+Thiago - thiagoleao.dev@gmail.com
+Vitor - vitorberto.dev@gmail.com
 
