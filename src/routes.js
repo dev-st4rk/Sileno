@@ -8,16 +8,16 @@ import { createStackNavigator } from 'react-navigation-stack';
 
 import { MaterialIcons } from '@expo/vector-icons';
 
-import Register from './pages/Register';
-import Verification from './pages/Verification';
+import Register from './pages/register/register';
+import Verification from './pages/verification/verification';
 
-import Main from './pages/Main';
-import Profile from './pages/Profile';
-import Friends from './pages/FriendList';
+import Main from './pages/main/main';
+import Profile from './pages/profile/profile';
+import Friends from './pages/friendlist/friendlist.js';
 
-import QrCode from './pages/friendQr';
-import White from './pages/WhitePage';
-import Roll from './pages/routeTest';
+import QrCode from './pages/friendlist/friendQr';
+import White from './pages/white/white';
+import Night from './pages/night/night';
 
 import tabbarConfigs from './components/styleElements.json';
 
@@ -106,10 +106,10 @@ const Routes = createBottomTabNavigator({
     Night: {
         screen: createStackNavigator(
             {
-                Roll
+                Night
             },
             {
-                initialRouteName: 'Roll',
+                initialRouteName: 'Night',
                 headerMode:
                     tabbarConfigs.tabbar.config.stackNavigatorConfigs.cabecalhoApp, // retira o header do aplicativo - uma parte branca que não usamos
                     mode: tabbarConfigs.tabbar.config.stackNavigatorConfigs.mode, // modo de transição do app. O default sempre é card

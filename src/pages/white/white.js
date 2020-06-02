@@ -1,13 +1,9 @@
 import React from 'react';
 import { StyleSheet, SafeAreaView, FlatList } from 'react-native';
-import ListItem, { Separator } from '../components/SwipeTest';
+import ListItem, { Separator } from '../../components/SwipeTest';
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-  },
-});
+import whiteStyle from './white.styles.js'; // A little racist
+const styles = StyleSheet.create(whiteStyle);
 
 export default class App extends React.Component {
   render() {

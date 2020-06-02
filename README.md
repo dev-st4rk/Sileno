@@ -7,7 +7,7 @@ O projeto Sileno define-se por um aplicativo de proteção de integridade social
 Para tal, contamos com funções que consistem desde alertar os membros da sessão do nosso usuário até prevenir acesso a redes sociais pelo período de tempo definido anteriormente pelo usuário.
 O projeto encontra-se em desenvolvimento e sobre a licença LGPL. O progresso pode ser acompanhado a seguir.
 # Requerimentos
-Aplicativos desenvolvidos em react-native geralmente necessitam de um Android 4.1 ou superior. voce pode usar Windows, Linux ou macOS para buildar esse projeto, entretanto caso seu foco seja iOS, voce está limitado ao macOS. Por sorte, utilizamos o Expo, tal qual voce pode baixar em seu iOS para contornar esse problema.
+Aplicativos desenvolvidos em react-native geralmente necessitam de um Android 4.1 ou superior. você pode usar Windows, Linux ou macOS para buildar esse projeto, entretanto caso seu foco seja iOS, você está limitado ao macOS. Por sorte, utilizamos o Expo, tal qual você pode baixar em seu iOS para contornar esse problema.
 # Instalação & Desenvolvimento
 1. Para começar, todos os desenvolvedores utilizam o Node na versão 12.17. Para checar sua versão utilize o comando abaixo no terminal:
 ```bash
@@ -24,10 +24,10 @@ $ git clone https://github.com/ThiagoLeaoDev/Sileno.git
 ```bash
 npm install expo-cli --global
 ```
-5. Se voce está usando um emulador:
+5. Se você está usando um emulador:
 5.1 Baixe o aplicativo do Expo através da Play Store
 5.2 Copie o link dado pelo Expo, geralmente `exp://<seuip>/19000`
-6. Se voce está usando um celular:
+6. Se você está usando um celular:
 6.1 Baixe o aplicativo do Expo através da Play Store
 6.2 Escaneie o código QR disponibilizado pelo Expo
 
@@ -50,10 +50,10 @@ npm install expo-cli --global
     - [ ]  Menu lateral
 - Mapa
     - [x]  Pegar a localização do usuário
-    - [ ]  Retornar câmera a localização do usuário
+    - [x]  Retornar câmera a localização do usuário
     - [x]  Mostrar a localização do usuário
     - [ ]  Importar a localização dos sátiros
-    - [ ]  Mostrar a localização dos sátiros
+    - [x]  Mostrar a localização dos sátiros
     - [ ]  Pesquisar localização sátiro/estabelecimento
     - [ ]  Traçar rota noite anterior
     - [ ]  Mostrar localização do estabelecimento
@@ -109,7 +109,7 @@ npm install expo-cli --global
 
 
 ## Contato
-Caso voce deseje entrar em contato com um desenvolvedor, voce pode utilzar qualquer um dos seguintes e-mails:
+Caso você deseje entrar em contato com um desenvolvedor, você pode utilzar qualquer um dos seguintes e-mails:
 
 - Bruno - bruno.trigueiro@outlook.com
 - Thiago - thiagoleao.dev@gmail.com

@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { View, Text, StyleSheet, TextInput, TouchableOpacity, KeyboardAvoidingView,  } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 
-import InputComponent from '../components/Input';
-
+import InputComponent from '../../components/Input';
+import verificationStyle from './verification.style.js';
 export default function Register({navigation}) {
     // create state hidden or visible for view using react hooks. Basically you need pass two objects, the first object is 
     //the final result or the response of your call, and the last object is where you pass the conditions, then useState for
@@ -42,36 +42,4 @@ const [alertVisible, setAlertVisible] = useState(null);
     );
 }
 
-const styles = StyleSheet.create({
-    Content: {
-        flex: 1,
-        backgroundColor: '#272B35',
-        alignItems: 'center',
-        flexDirection: 'column'
-    },
-    containerForm: {
-        width: '80%',
-        top: '10%',
-    },
-    containerLogo: {
-        backgroundColor: '#000',
-        width: 130,
-        height: 130,
-        alignSelf: 'center'
-    },
-    topDesc: {
-        color: '#A7A7A7',
-        fontSize: 16,
-    },
-    buttonInput: {
-        position: 'absolute',
-        height: 48,
-        width: 62,
-        alignSelf: 'flex-end',
-        borderTopRightRadius: 5,
-        borderBottomRightRadius: 5,
-        backgroundColor: '#111',
-        justifyContent: 'space-around',
-        alignItems: 'center'
-    }
-});
+const styles = StyleSheet.create(verificationStyle);
