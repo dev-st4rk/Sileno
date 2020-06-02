@@ -2,6 +2,7 @@
 > É mais fácil conviver com uma má consciência do que com uma má reputação.​
 
 ![enter image description here](https://img.shields.io/github/stars/ThiagoLeaoDev/Sileno)  ![enter image description here](https://img.shields.io/github/issues/ThiagoLeaoDev/Sileno?style=flat-square)
+
 O projeto Sileno define-se por um aplicativo de proteção de integridade social para dispositivos mobile. Sua principal característica é garantir a sua imagem e integridade em eventos sociais ou quaisquer outro tipo de confraternização. 
 Para tal, contamos com funções que consistem desde alertar os membros da sessão do nosso usuário até prevenir acesso a redes sociais pelo período de tempo definido anteriormente pelo usuário.
 O projeto encontra-se em desenvolvimento e sobre a licença LGPL. O progresso pode ser acompanhado a seguir.
