@@ -37,6 +37,7 @@ module.exports = {
         position: 'absolute',
         bottom: 70,
         alignSelf: 'flex-end',
+        opacity:1
 
     },
     cardSlide: {
