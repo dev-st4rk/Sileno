@@ -25,7 +25,7 @@ export default function FriendList({ navigation }) {
             <View style={styles.pageRoutes}>
                 <Text style={styles.textRoutes}>Sátiros</Text>
                 <Text style={styles.textRoutes}>Amigos</Text>
-                <Text style={styles.textRoutes}>Bloq.</Text>
+                <Text style={styles.textRoutes}>Contatos</Text>
             </View>
             <View style={styles.searchContainer}>
                 <SearchBar/>

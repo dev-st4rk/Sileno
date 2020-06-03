@@ -14,8 +14,9 @@ import setProfile from './pages/RegisterProcess/SetProfile';
 
 import Main from './pages/tabbarPages/Main';
 import Profile from './pages/tabbarPages/Profile';
-import Friends from './pages/FriendList';
 
+import Friends from './pages/FriendList';
+import ContactsList from './pages/ContactsList';
 import QrCode from './pages/friendQr';
 import White from './pages/WhitePage';
 
@@ -201,7 +202,6 @@ const RegisterProcess = createStackNavigator(
             },
         },
     );
-
 
 
 const DefaultStack = createStackNavigator(
