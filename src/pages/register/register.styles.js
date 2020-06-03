@@ -20,10 +20,38 @@ module.exports = {
         fontSize: 18,
         marginTop: '12%'
     },
+    picker: {
+        width: '100%',
+        height: 48,
+        backgroundColor: '#191824',
+        borderRadius: 5,
+        fontSize: 20,
+        color: '#C1C1C1',
+        padding: 14,
+        marginTop: '12%',
+    },
+    iconPicker: {
+        position: 'absolute',
+        left: '92%',
+        top: 12
+    },
     containerTwoInputs:{
         flexDirection: 'row',
         justifyContent: 'space-between',
         marginTop: '8%'
+    },
+    fakeInput: {
+        width: '22%',
+        height: 48,
+        backgroundColor: '#191824',
+        borderRadius: 5,
+        fontSize: 20,
+        color: '#C1C1C1',
+        padding: 14
+    },
+    fakePlaceholder:{
+        fontSize: 14,
+        color: '#C1C1C1',
     },
     containerButton: {
         top: '13%',
@@ -45,7 +73,6 @@ module.exports = {
         backgroundColor: '#000',
         opacity: 0.52,
     },
-
     alertCard: {
         position: 'absolute',
         width: '80%',

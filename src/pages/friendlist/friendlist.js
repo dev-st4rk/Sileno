@@ -4,6 +4,7 @@ import { MaterialIcons } from '@expo/vector-icons';
 
 import SearchBar from '../../components/searchInput';
 import Partition from '../../components/PartitionFriendList';
+import ItemFriend from '../../components/FriendListItem'
 import friendlistStyle from './friendlist.styles.js';
 
 // import { Container } from './styles';

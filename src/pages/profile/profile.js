@@ -43,9 +43,9 @@ function Profile({ navigation }){
                             <Text style={styles.infoNum}>145</Text>
                             <Text style={styles.infoName}>Amigos</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity onPress={()=>{}} style={styles.infoGroup}>
+                        <TouchableOpacity onPress={()=>{ navigation.navigate('ContactsList'); }} style={styles.infoGroup}>
                             <Text style={styles.infoNum}>10</Text>
-                            <Text style={styles.infoName}>Bloq.</Text>
+                            <Text style={styles.infoName}>Contatos</Text>
                         </TouchableOpacity>
                     </View>
                 </View>

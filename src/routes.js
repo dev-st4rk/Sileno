@@ -140,6 +140,7 @@ const Routes = createBottomTabNavigator(
           Profile,
           QrCode,
           Friends,
+          ContactsList
         },
         {
           initialRouteName: "Profile",
@@ -213,12 +214,20 @@ const RegisterProcess = createStackNavigator(
 
 
 const DefaultStack = createStackNavigator(
-    //cria um navegador do tipo stack
-    //gerencia as rotas quando o usuário iniciar o aplicativo
-    {
-        Register: RegisterProcess,
-        Main: Routes
+  //cria um navegador do tipo stack
+  //gerencia as rotas quando o usuário iniciar o aplicativo
+  {
+    Register: RegisterProcess,
+    Main: Routes
+  },
+  {
+    headerMode: tabbarConfigs.tabbar.config.stackNavigatorConfigs.cabecalhoApp, // retira o header do aplicativo - uma parte branca que não usamos
+    mode: tabbarConfigs.tabbar.config.stackNavigatorConfigs.mode, // modo de transição do app. O default sempre é card
+    navigationOptions: {
+      gesturesEnabled:
+      tabbarConfigs.tabbar.config.stackNavigatorConfigs.gesturesEnabled, //  Se você pode usar gestos para descartar essa tela. O padrão é true no iOS, false no Android.
     },
+  },
 );
 export default createAppContainer(DefaultStack); // cria o container da tabbar com todas as configurações acima
 // export default createAppContainer(Routes);

@@ -3,11 +3,8 @@ import { View, Text, StyleSheet, TextInput, TouchableOpacity, KeyboardAvoidingVi
 import { MaterialIcons } from '@expo/vector-icons';
 
 import InputComponent from '../../components/Input';
-<<<<<<< HEAD:src/pages/verification/verification.js
 import verificationStyle from './verification.style.js';
-=======
 
->>>>>>> register-process:src/pages/RegisterProcess/Verification.js
 export default function Register({navigation}) {
     // create state hidden or visible for view using react hooks. Basically you need pass two objects, the first object is 
     //the final result or the response of your call, and the last object is where you pass the conditions, then useState for
