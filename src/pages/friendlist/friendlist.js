@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 
@@ -9,6 +9,7 @@ import friendlistStyle from './friendlist.styles.js';
 // import { Container } from './styles';
 
 export default function FriendList({ navigation }) {
+
     return (
         <View style={styles.Content}> 
             <View  style={styles.topicons}>
@@ -22,15 +23,14 @@ export default function FriendList({ navigation }) {
             <View style={styles.pageRoutes}>
                 <Text style={styles.textRoutes}>Sátiros</Text>
                 <Text style={styles.textRoutes}>Amigos</Text>
-                <Text style={styles.textRoutes}>Bloq.</Text>
+                <Text style={styles.textRoutes}>Contatos</Text>
             </View>
             <View style={styles.searchContainer}>
                 <SearchBar/>
             </View>
             <View style={{height: '70%', top: 190}}>
             <ScrollView>
-                <Partition/>
-                <Partition/>
+                    <ItemFriend name='Andrew Richard' description='Architect, New York' status='online'/>
             </ScrollView>
             </View>
         </View>

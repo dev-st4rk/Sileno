@@ -19,6 +19,8 @@ import White from "./pages/white/white";
 import Night from "./pages/night/night";
 
 import tabbarConfigs from "./components/styleElements.json";
+import setProfile from './pages/RegisterProcess/SetProfile';
+import ContactsList from './pages/ContactsList';
 
 const Routes = createBottomTabNavigator(
   {
@@ -190,22 +192,33 @@ const Routes = createBottomTabNavigator(
   }
 );
 
-const DefaultStack = createStackNavigator(
-  //cria um navegador do tipo stack
-  //gerencia as rotas quando o usuário iniciar o aplicativo
-  {
-    Register: Register,
-    Verification: Verification,
-    Main: Routes,
-  },
-  {
-    headerMode: tabbarConfigs.tabbar.config.stackNavigatorConfigs.cabecalhoApp, // retira o header do aplicativo - uma parte branca que não usamos
-    mode: tabbarConfigs.tabbar.config.stackNavigatorConfigs.mode, // modo de transição do app. O default sempre é card
-    navigationOptions: {
-      gesturesEnabled:
-        tabbarConfigs.tabbar.config.stackNavigatorConfigs.gesturesEnabled, //  Se você pode usar gestos para descartar essa tela. O padrão é true no iOS, false no Android.
+const RegisterProcess = createStackNavigator(
+    //cria um navegador do tipo stack
+    //gerencia as rotas quando o usuário iniciar o aplicativo
+    {
+        Register: Register,
+        Verification: Verification,
+        setProfile: setProfile,
+        Main:Routes,
     },
-  }
+    {
+        headerMode: tabbarConfigs.tabbar.config.stackNavigatorConfigs.cabecalhoApp, // retira o header do aplicativo - uma parte branca que não usamos
+        mode: tabbarConfigs.tabbar.config.stackNavigatorConfigs.mode, // modo de transição do app. O default sempre é card
+        navigationOptions: {
+            gesturesEnabled:
+            tabbarConfigs.tabbar.config.stackNavigatorConfigs.gesturesEnabled, //  Se você pode usar gestos para descartar essa tela. O padrão é true no iOS, false no Android.
+            },
+        },
+    );
+
+
+const DefaultStack = createStackNavigator(
+    //cria um navegador do tipo stack
+    //gerencia as rotas quando o usuário iniciar o aplicativo
+    {
+        Register: RegisterProcess,
+        Main: Routes
+    },
 );
 export default createAppContainer(DefaultStack); // cria o container da tabbar com todas as configurações acima
 // export default createAppContainer(Routes);
