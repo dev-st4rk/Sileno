@@ -76,6 +76,8 @@ function Profile({ navigation }){
                         </View>
                     </View>
                 </Modal>
+                <View style={styles.card2}>
+                </View>
                 <View style={styles.card}>
                     <View style={styles.searchContainer}>
                         <SearchBar/>

@@ -1,15 +1,15 @@
 import React from "react";
-import { View, Text, Image } from "react-native";
+import { Animated, View, Text, Image } from "react-native";
 
 import { createAppContainer } from "react-navigation";
 import { createBottomTabNavigator } from "react-navigation-tabs";
 import { createStackNavigator } from "react-navigation-stack";
-
+import { Ionicons } from "@expo/vector-icons";
 import { MaterialIcons } from "@expo/vector-icons";
 
 import Register from "./pages/register/register";
 import Verification from "./pages/verification/verification";
-
+import Icon from "react-native-vector-icons/FontAwesome";
 import Main from "./pages/main/main";
 import Profile from "./pages/profile/profile";
 import Friends from "./pages/friendlist/friendlist.js";
@@ -17,10 +17,10 @@ import Friends from "./pages/friendlist/friendlist.js";
 import QrCode from "./pages/friendlist/friendQr";
 import White from "./pages/white/white";
 import Night from "./pages/night/night";
-
+import Logo from './components/sileno';
 import tabbarConfigs from "./components/styleElements.json";
-import setProfile from './pages/RegisterProcess/SetProfile';
-import ContactsList from './pages/ContactsList';
+import setProfile from "./pages/RegisterProcess/SetProfile";
+import ContactsList from "./pages/ContactsList";
 
 const Routes = createBottomTabNavigator(
   {
@@ -37,18 +37,54 @@ const Routes = createBottomTabNavigator(
         }
       ),
       navigationOptions: () => ({
-        tabBarIcon: ({ tintColor }) => (
-          <View style={{ alignItems: "center", justifyContent: "flex-end" }}>
-            <MaterialIcons
-              name="settings"
-              size={tabbarConfigs.tabbar.config.tamanhoIcones}
-              color={tintColor}
-            />
-            <View>
-              <Text style={{ color: tintColor, fontSize: 10 }}>config</Text>
-            </View>
-          </View>
-        ),
+        tabBarIcon: ({ tintColor }) => {
+          
+          if (tintColor == tabbarConfigs.colorElements.paletaTabbar.itemAtivo)
+            return (
+              <View
+                style={{ alignItems: "center", justifyContent: "flex-end" }}
+              >
+                <Icon
+                  name="gear"
+                  size={25}
+                  color={tintColor}
+                  style={{
+                    textShadowColor: "#f8295f",
+                    shadowOpacity: 10,
+                    textShadowRadius: 10,
+                    textShadowOffset: { width: 0, height: 0 },
+                  }}
+                />
+                <View>
+                  <Text
+                    style={{
+                      color: tintColor,
+                      fontSize: 10,
+                      textShadowColor: "#f8295f",
+                      shadowOpacity: 10,
+                      textShadowRadius: 10,
+                      textShadowOffset: { width: 0, height: 0 },
+                    }}
+                  >
+                    config
+                  </Text>
+                </View>
+              </View>
+            );
+          else
+            return (
+              <View
+                style={{ alignItems: "center", justifyContent: "flex-end" }}
+              >
+                <Icon name="gear" size={25} color={tintColor} style={{}} />
+                <View>
+                  <Text style={{ color: tintColor, fontSize: 10 }}>
+                  config
+                  </Text>
+                </View>
+              </View>
+            );
+        },
       }),
     },
     Block: {
@@ -64,20 +100,54 @@ const Routes = createBottomTabNavigator(
         }
       ),
       navigationOptions: () => ({
-        tabBarIcon: ({ tintColor }) => (
-          <View style={{ alignItems: "center", justifyContent: "flex-end" }}>
-            <MaterialIcons
-              name="lock"
-              size={tabbarConfigs.tabbar.config.tamanhoIcones}
-              color={tintColor}
-            />
-            <View>
-              <Text style={{ color: tintColor, fontSize: 10 }}>
-                aplicativos
-              </Text>
-            </View>
-          </View>
-        ),
+        tabBarIcon: ({ tintColor }) => {
+          
+          if (tintColor == tabbarConfigs.colorElements.paletaTabbar.itemAtivo)
+            return (
+              <View
+                style={{ alignItems: "center", justifyContent: "flex-end" }}
+              >
+                <Icon
+                  name="lock"
+                  size={25}
+                  color={tintColor}
+                  style={{
+                    textShadowColor: "#f8295f",
+                    shadowOpacity: 10,
+                    textShadowRadius: 10,
+                    textShadowOffset: { width: 0, height: 0 },
+                  }}
+                />
+                <View>
+                  <Text
+                    style={{
+                      color: tintColor,
+                      fontSize: 10,
+                      textShadowColor: "#f8295f",
+                      shadowOpacity: 10,
+                      textShadowRadius: 10,
+                      textShadowOffset: { width: 0, height: 0 },
+                    }}
+                  >
+                    aplicativos
+                  </Text>
+                </View>
+              </View>
+            );
+          else
+            return (
+              <View
+                style={{ alignItems: "center", justifyContent: "flex-end" }}
+              >
+                <Icon name="lock" size={25} color={tintColor} style={{}} />
+                <View>
+                  <Text style={{ color: tintColor, fontSize: 10 }}>
+                    aplicativos
+                  </Text>
+                </View>
+              </View>
+            );
+        },
       }),
     },
     Main: {
@@ -93,18 +163,26 @@ const Routes = createBottomTabNavigator(
         }
       ),
       navigationOptions: () => ({
-        tabBarIcon: ({ tintColor }) => (
-          <View style={{ alignItems: "center", justifyContent: "flex-end" }}>
-            <MaterialIcons
-              name="settings"
-              size={tabbarConfigs.tabbar.config.tamanhoIcones}
-              color={tintColor}
-            />
-            <View>
-              <Text style={{ color: tintColor, fontSize: 10 }}>config</Text>
-            </View>
-          </View>
-        ),
+        tabBarIcon: ({ tintColor }) => {
+          
+          if (tintColor == tabbarConfigs.colorElements.paletaTabbar.itemAtivo)
+            return (
+              <View
+                style={{ alignItems: "center", justifyContent: "flex-end" }}
+              >
+                <Logo color={tintColor} />
+               
+              </View>
+            );
+          else
+            return (
+              <View
+                style={{ alignItems: "center", justifyContent: "flex-end" }}
+              >
+                <Logo color={tintColor} />
+              </View>
+            );
+        },
       }),
     },
     Night: {
@@ -120,18 +198,54 @@ const Routes = createBottomTabNavigator(
         }
       ),
       navigationOptions: () => ({
-        tabBarIcon: ({ tintColor }) => (
-          <View style={{ alignItems: "center", justifyContent: "flex-end" }}>
-            <MaterialIcons
-              name="whatshot"
-              size={tabbarConfigs.tabbar.config.tamanhoIcones}
-              color={tintColor}
-            />
-            <View>
-              <Text style={{ color: tintColor, fontSize: 10 }}>noite</Text>
-            </View>
-          </View>
-        ),
+        tabBarIcon: ({ tintColor }) => {
+          
+          if (tintColor == tabbarConfigs.colorElements.paletaTabbar.itemAtivo)
+            return (
+              <View
+                style={{ alignItems: "center", justifyContent: "flex-end" }}
+              >
+                <Icon
+                  name="moon-o"
+                  size={25}
+                  color={tintColor}
+                  style={{
+                    textShadowColor: "#f8295f",
+                    shadowOpacity: 10,
+                    textShadowRadius: 10,
+                    textShadowOffset: { width: 0, height: 0 },
+                  }}
+                />
+                <View>
+                  <Text
+                    style={{
+                      color: tintColor,
+                      fontSize: 10,
+                      textShadowColor: "#f8295f",
+                      shadowOpacity: 10,
+                      textShadowRadius: 10,
+                      textShadowOffset: { width: 0, height: 0 },
+                    }}
+                  >
+                    noite
+                  </Text>
+                </View>
+              </View>
+            );
+          else
+            return (
+              <View
+                style={{ alignItems: "center", justifyContent: "flex-end" }}
+              >
+                <Icon name="moon-o" size={25} color={tintColor} style={{}} />
+                <View>
+                  <Text style={{ color: tintColor, fontSize: 10 }}>
+                    noite
+                  </Text>
+                </View>
+              </View>
+            );
+        },
       }),
     },
     Profile: {
@@ -140,7 +254,7 @@ const Routes = createBottomTabNavigator(
           Profile,
           QrCode,
           Friends,
-          ContactsList
+          ContactsList,
         },
         {
           initialRouteName: "Profile",
@@ -150,8 +264,41 @@ const Routes = createBottomTabNavigator(
         }
       ),
       navigationOptions: () => ({
-        tabBarIcon: ({ tintColor }) => (
-          <View style={{ alignItems: "center", justifyContent: "flex-end" }}>
+        tabBarIcon: ({ tintColor }) => {
+          
+          if (tintColor == tabbarConfigs.colorElements.paletaTabbar.itemAtivo)
+            return (
+              <View style={{ alignItems: "center", justifyContent: "flex-end",textShadowColor: "#f8295f",
+              shadowOpacity: 10,
+              textShadowRadius: 10,
+              textShadowOffset: { width: 0, height: 0 }, }}>
+              <Image
+                style={{
+                  height:
+                    tabbarConfigs.tabbar.config.iconePerfil.tamanhoImagemPerfil,
+                  width:
+                    tabbarConfigs.tabbar.config.iconePerfil.tamanhoImagemPerfil,
+                  borderRadius: tabbarConfigs.tabbar.config.iconePerfil.radius,
+                  borderWidth: tabbarConfigs.tabbar.config.iconePerfil.border,
+                  borderColor: tintColor,
+                  textShadowColor: "#f8295f",
+                      shadowOpacity: 10,
+                      textShadowRadius: 10,
+                      textShadowOffset: { width: 0, height: 0 },
+                }}
+                source={{ uri: "https://www.thispersondoesnotexist.com/image" }}
+              />
+              <View>
+                <Text style={{ color: tintColor, fontSize: 10,textShadowColor: "#f8295f",
+                      shadowOpacity: 10,
+                      textShadowRadius: 10,
+                      textShadowOffset: { width: 0, height: 0 }, }}>perfil</Text>
+              </View>
+            </View>
+            );
+          else
+            return (
+              <View style={{ alignItems: "center", justifyContent: "flex-end" }}>
             <Image
               style={{
                 height:
@@ -168,7 +315,8 @@ const Routes = createBottomTabNavigator(
               <Text style={{ color: tintColor, fontSize: 10 }}>perfil</Text>
             </View>
           </View>
-        ),
+            );
+        },
       }),
     },
   },
@@ -194,40 +342,39 @@ const Routes = createBottomTabNavigator(
 );
 
 const RegisterProcess = createStackNavigator(
-    //cria um navegador do tipo stack
-    //gerencia as rotas quando o usuário iniciar o aplicativo
-    {
-        Register: Register,
-        Verification: Verification,
-        setProfile: setProfile,
-        Main:Routes,
-    },
-    {
-        headerMode: tabbarConfigs.tabbar.config.stackNavigatorConfigs.cabecalhoApp, // retira o header do aplicativo - uma parte branca que não usamos
-        mode: tabbarConfigs.tabbar.config.stackNavigatorConfigs.mode, // modo de transição do app. O default sempre é card
-        navigationOptions: {
-            gesturesEnabled:
-            tabbarConfigs.tabbar.config.stackNavigatorConfigs.gesturesEnabled, //  Se você pode usar gestos para descartar essa tela. O padrão é true no iOS, false no Android.
-            },
-        },
-    );
-
-
-const DefaultStack = createStackNavigator(
   //cria um navegador do tipo stack
   //gerencia as rotas quando o usuário iniciar o aplicativo
   {
-    Register: RegisterProcess,
-    Main: Routes
+    // Register: Register,
+    //Verification: Verification,
+    // setProfile: setProfile,
+    Main: Routes,
   },
   {
     headerMode: tabbarConfigs.tabbar.config.stackNavigatorConfigs.cabecalhoApp, // retira o header do aplicativo - uma parte branca que não usamos
     mode: tabbarConfigs.tabbar.config.stackNavigatorConfigs.mode, // modo de transição do app. O default sempre é card
     navigationOptions: {
       gesturesEnabled:
-      tabbarConfigs.tabbar.config.stackNavigatorConfigs.gesturesEnabled, //  Se você pode usar gestos para descartar essa tela. O padrão é true no iOS, false no Android.
+        tabbarConfigs.tabbar.config.stackNavigatorConfigs.gesturesEnabled, //  Se você pode usar gestos para descartar essa tela. O padrão é true no iOS, false no Android.
     },
+  }
+);
+
+const DefaultStack = createStackNavigator(
+  //cria um navegador do tipo stack
+  //gerencia as rotas quando o usuário iniciar o aplicativo
+  {
+    Register: RegisterProcess,
+    Main: Routes,
   },
+  {
+    headerMode: tabbarConfigs.tabbar.config.stackNavigatorConfigs.cabecalhoApp, // retira o header do aplicativo - uma parte branca que não usamos
+    mode: tabbarConfigs.tabbar.config.stackNavigatorConfigs.mode, // modo de transição do app. O default sempre é card
+    navigationOptions: {
+      gesturesEnabled:
+        tabbarConfigs.tabbar.config.stackNavigatorConfigs.gesturesEnabled, //  Se você pode usar gestos para descartar essa tela. O padrão é true no iOS, false no Android.
+    },
+  }
 );
 export default createAppContainer(DefaultStack); // cria o container da tabbar com todas as configurações acima
 // export default createAppContainer(Routes);

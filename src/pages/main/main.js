@@ -40,7 +40,7 @@ function Main() {
   function mapActive(stat) {
     if (stat) setOpacity(0.1);
     else {
-      setOpacity(1);
+        setOpacity(1)
     }
   }
   useEffect(() => {

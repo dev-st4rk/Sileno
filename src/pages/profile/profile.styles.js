@@ -24,7 +24,8 @@ module.exports = {
         width: 100,
         height: 100,
         borderRadius: 60,
-        alignSelf: 'center'
+        alignSelf: 'center',
+        elevation:0,
     },
     addImage: {
         position: 'absolute',
@@ -65,12 +66,34 @@ module.exports = {
     },
     card: {
         position: 'absolute',
+        
         width: '100%',
         height: '50%',
-        backgroundColor: '#2A2E43',
+        backgroundColor: 'red',
         bottom: 0,
-        borderTopLeftRadius: 20,
-        borderTopRightRadius: 20
+     
+    },
+    card2: {
+        position: 'absolute',
+        width: '110%',
+        height: '51%',
+        left:-2,
+        backgroundColor: 'blue',
+        bottom: 20,
+        transform: [{ rotate: "-4deg" }],
+        borderWidth: 2,
+        borderColor: "#F8295F",
+                shadowColor: "#f8295f",
+                shadowOpacity: 2,
+                shadowColor: "#000",
+shadowOffset: {
+	width: 0,
+	height: -2,
+},
+shadowOpacity: 0.25,
+shadowRadius: 3.84,
+
+
     },
     searchContainer: {
         position: 'absolute',
