@@ -281,10 +281,6 @@ const Routes = createBottomTabNavigator(
                   borderRadius: tabbarConfigs.tabbar.config.iconePerfil.radius,
                   borderWidth: tabbarConfigs.tabbar.config.iconePerfil.border,
                   borderColor: tintColor,
-                  textShadowColor: "#f8295f",
-                      shadowOpacity: 10,
-                      textShadowRadius: 10,
-                      textShadowOffset: { width: 0, height: 0 },
                 }}
                 source={{ uri: "https://www.thispersondoesnotexist.com/image" }}
               />

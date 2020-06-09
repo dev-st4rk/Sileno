@@ -15,7 +15,7 @@ import {
 } from "expo-location";
 import { TouchableHighlight, TextInput } from "react-native-gesture-handler";
 import { MaterialIcons } from "@expo/vector-icons";
-
+import primaryColor from '../../visual.json';
 import SearchBar from "../../components/searchInput";
 import Icon from "react-native-vector-icons/FontAwesome";
 import Mapstyle from "../../components/mapbox/MapStyle.json";
@@ -100,9 +100,9 @@ function Main() {
         <Icon
                   name="search"
                   size={20}
-                  color={"#f8295f"}
+                  color={primaryColor.themeColor}
                   style={{
-                    textShadowColor: "#f8295f",
+                    textShadowColor: primaryColor.themeColor,
                     shadowOpacity: 10,
                     textShadowRadius: 10,
                     textShadowOffset: { width: 0, height: 0 },
@@ -123,9 +123,9 @@ function Main() {
           <Icon
                   name="location-arrow"
                   size={20}
-                  color={"#f8295f"}
+                  color={primaryColor.themeColor}
                   style={{
-                    textShadowColor: "#f8295f",
+                    textShadowColor: primaryColor.themeColor,
                     shadowOpacity: 10,
                     textShadowRadius: 10,
                     textShadowOffset: { width: 0, height: 0 },
