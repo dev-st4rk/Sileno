@@ -1,5 +1,5 @@
 import React from "react";
-import { Animated, View, Text, Image } from "react-native";
+import { TouchableHighlight, Animated, View, Text, Image } from "react-native";
 
 import { createAppContainer } from "react-navigation";
 import { createBottomTabNavigator } from "react-navigation-tabs";
@@ -45,7 +45,7 @@ const Routes = createBottomTabNavigator(
                 style={{ alignItems: "center", justifyContent: "flex-end" }}
               >
                 <Icon
-                  name="gear"
+                  name="user"
                   size={25}
                   color={tintColor}
                   style={{
@@ -66,7 +66,7 @@ const Routes = createBottomTabNavigator(
                       textShadowOffset: { width: 0, height: 0 },
                     }}
                   >
-                    config
+                    social
                   </Text>
                 </View>
               </View>
@@ -76,10 +76,10 @@ const Routes = createBottomTabNavigator(
               <View
                 style={{ alignItems: "center", justifyContent: "flex-end" }}
               >
-                <Icon name="gear" size={25} color={tintColor} style={{}} />
+                <Icon name="user-o" size={25} color={tintColor} style={{}} />
                 <View>
                   <Text style={{ color: tintColor, fontSize: 10 }}>
-                  config
+                  social
                   </Text>
                 </View>
               </View>
@@ -235,7 +235,7 @@ const Routes = createBottomTabNavigator(
               <View
                 style={{ alignItems: "center", justifyContent: "flex-end" }}
               >
-                <Icon name="moon-o" size={25} color={tintColor} style={{}} />
+                <Icon backgroundColor={tintColor} name="moon-o" fill={tintColor} size={25} color={tintColor} style={{}} />
                 <View>
                   <Text style={{ color: tintColor, fontSize: 10 }}>
                     noite
@@ -279,10 +279,6 @@ const Routes = createBottomTabNavigator(
                   borderRadius: tabbarConfigs.tabbar.config.iconePerfil.radius,
                   borderWidth: tabbarConfigs.tabbar.config.iconePerfil.border,
                   borderColor: tintColor,
-                  textShadowColor: "#f8295f",
-                      shadowOpacity: 10,
-                      textShadowRadius: 10,
-                      textShadowOffset: { width: 0, height: 0 },
                 }}
                 source={{ uri: "https://www.thispersondoesnotexist.com/image" }}
               />
@@ -340,8 +336,6 @@ const Routes = createBottomTabNavigator(
 );
 
 const RegisterProcess = createStackNavigator(
-  //cria um navegador do tipo stack
-  //gerencia as rotas quando o usuário iniciar o aplicativo
   {
     Register: Register,
     Verification: Verification,
@@ -359,8 +353,6 @@ const RegisterProcess = createStackNavigator(
 );
 
 const DefaultStack = createStackNavigator(
-  //cria um navegador do tipo stack
-  //gerencia as rotas quando o usuário iniciar o aplicativo
   {
     Register: RegisterProcess,
     Main: Routes,

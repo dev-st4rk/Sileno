@@ -20,12 +20,11 @@ module.exports = {
     containerAvatar: {
         width: 60,
     },
-    userAvatar:{
+    userAvatar: {
         width: 100,
         height: 100,
         borderRadius: 60,
         alignSelf: 'center',
-        elevation:0,
     },
     addImage: {
         position: 'absolute',
@@ -66,31 +65,40 @@ module.exports = {
     },
     card: {
         position: 'absolute',
-        
+
         width: '100%',
         height: '50%',
-        backgroundColor: 'red',
+        backgroundColor: '#0B0D19',
         bottom: 0,
+        elevation:5,
+        shadowColor: '#000000',
+    shadowOffset: {
+        width: 0,
+        height: -3
+    },
+    shadowRadius: 5,
+    shadowOpacity: 1.0
+
     },
     card2: {
         position: 'absolute',
         width: '110%',
         height: '51%',
-        left:-2,
-        backgroundColor: 'blue',
+        left: -2,
+        backgroundColor: '#0B0D19',
         bottom: 20,
-        transform: [{ rotate: "-4deg" }],
-        borderWidth: 2,
-        borderColor: "#F8295F",
-                shadowColor: "#f8295f",
-                shadowOpacity: 2,
-                shadowColor: "#000",
-shadowOffset: {
-	width: 0,
-	height: -2,
-},
-shadowOpacity: 0.25,
-shadowRadius: 3.84,
+        transform: [{
+            rotate: "-4deg"
+        }],
+        borderWidth: 3,
+            borderRadius: 2,
+            borderColor: '#f8295f',
+            borderBottomWidth: 0,
+            shadowColor: '#f8295f',
+            shadowOffset: { width: 0, height: 22 },
+            shadowOpacity: 1,
+            shadowRadius: 2,
+            elevation: 1,
 
 
     },
@@ -99,6 +107,7 @@ shadowRadius: 3.84,
         top: 20,
         left: 20,
         right: 20,
+        
     },
     containerScroll: {
         height: '56%',
@@ -121,9 +130,9 @@ shadowRadius: 3.84,
         alignItems: "center",
         shadowColor: "#000",
         shadowOffset: {
-        width: 0,
-        height: 2
-    },
+            width: 0,
+            height: 2
+        },
         shadowOpacity: 0.25,
         shadowRadius: 3.84,
         elevation: 5

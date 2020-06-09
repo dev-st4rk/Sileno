@@ -1,15 +1,16 @@
 import React from 'react';
 import { View, Text, StyleSheet} from 'react-native';
 
-
+import primaryColor from '../visual.json';
 
 // import { Container } from './styles';
 
 const PartitionFriendList = () => {
     return(
         <View style={styles.containerPartition}>
+             <Text style={{fontSize: 16, color: primaryColor.themeColor}}>A</Text>
         <View style={styles.letterContainerList}>
-            <Text style={{fontSize: 16, color: '#707070'}}>A</Text>
+           
         </View>
         </View>
     );
@@ -18,15 +19,17 @@ const PartitionFriendList = () => {
 const styles = StyleSheet.create({
     containerPartition: {
         width: '90%',
+        flex:1,
+        flexDirection:'column',
         alignSelf: 'center',
-        borderColor: '#707070',
+        borderColor: primaryColor.themeColor,
         borderTopWidth: 2,
         marginTop: 10,
         paddingTop: 13
     },
     letterContainerList: {
         position: 'absolute',
-        backgroundColor: '#272B35',
+        backgroundColor: 'transparent',
         top: -12,
         paddingHorizontal: 10
     }

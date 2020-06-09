@@ -15,9 +15,9 @@ import {
 } from "expo-location";
 import { TouchableHighlight, TextInput } from "react-native-gesture-handler";
 import { MaterialIcons } from "@expo/vector-icons";
-
+import primaryColor from '../../visual.json';
 import SearchBar from "../../components/searchInput";
-
+import Icon from "react-native-vector-icons/FontAwesome";
 import Mapstyle from "../../components/mapbox/MapStyle.json";
 import MapSlide from "../../components/mapbox/MapSlide.json";
 import mapboxModule from "../../components/mapbox/controller.js";

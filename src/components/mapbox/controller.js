@@ -16,7 +16,7 @@ module.exports = {
         try{
         map.animateCamera({
             center: region,
-            pitch: 20,
+            pitch: 0,
             heading: 0,
             altitude: 0,
             zoom: zoom

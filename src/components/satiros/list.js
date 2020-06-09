@@ -5,9 +5,9 @@ import React from 'react'; //o useEffect executa algo quando o componente é mon
 
 module.exports = {
     localizarSatiros: () => {
-    var res = [];
+    var arr = [];
     for (let index = 0; index < satiros.length; index++) {
-        res.push(
+        arr.push(
             <Marker coordinate={
                 { 
                     latitude: satiros[index].latitude, 
@@ -25,7 +25,7 @@ module.exports = {
         </Marker>
         )
     }
-    return res;
+    return arr;
 }
 
 }
