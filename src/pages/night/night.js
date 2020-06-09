@@ -1,10 +1,11 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import nightStyle from './night.styles.js';
+import trianglesComponent from '../../components/trianglesComponent.js';
+
 const routeTest = () => {
     return (
-        <View style={{flex: 1, alignItems: 'center',justifyContent: 'space-around'}}>
-            <Text>oi</Text>
+        <View>
         </View>
     )
 }

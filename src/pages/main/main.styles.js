@@ -44,7 +44,7 @@ module.exports = {
         width: 142, 
         height: 172, 
         borderRadius: 12, 
-        backgroundColor: '#353A50',
+        backgroundColor: '#14172A',
         marginHorizontal: 8,
         alignItems: 'stretch'
     },

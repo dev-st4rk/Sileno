@@ -19,7 +19,7 @@ import White from "./pages/white/white";
 import Night from "./pages/night/night";
 import Logo from './components/sileno';
 import tabbarConfigs from "./components/styleElements.json";
-import setProfile from "./pages/RegisterProcess/SetProfile";
+import setProfile from "./pages/setprofile/setprofile";
 import ContactsList from "./pages/ContactsList";
 
 const Routes = createBottomTabNavigator(
@@ -168,10 +168,8 @@ const Routes = createBottomTabNavigator(
           if (tintColor == tabbarConfigs.colorElements.paletaTabbar.itemAtivo)
             return (
               <View
-                style={{ alignItems: "center", justifyContent: "flex-end" }}
-              >
-                <Logo color={tintColor} />
-               
+                style={{ alignItems: "center", justifyContent: "flex-end" }}>
+                <Logo color={tintColor} size={30} />
               </View>
             );
           else
@@ -345,9 +343,9 @@ const RegisterProcess = createStackNavigator(
   //cria um navegador do tipo stack
   //gerencia as rotas quando o usuário iniciar o aplicativo
   {
-    // Register: Register,
-    //Verification: Verification,
-    // setProfile: setProfile,
+    Register: Register,
+    Verification: Verification,
+    setProfile: setProfile,
     Main: Routes,
   },
   {

@@ -5,6 +5,9 @@ import * as ImagePicker from 'expo-image-picker';
 
 import InputComponent from '../../components/Input';
 
+import Triangles from '../../components/trianglesComponent';
+import setprofileStyles from './setprofile.styles';
+
 export default function SetProfile({navigation}) {
 	const [name, setName] = useState(''); //state for inputName
 	const [number, setNumber] = useState(25);
@@ -36,6 +39,9 @@ export default function SetProfile({navigation}) {
 
 	return (
 		<View style={styles.Content}>
+			<View style={{top: '15%'}}>
+				<Triangles/>
+			</View>
 			<View style={styles.containrImageDesc}>
 					<View style={styles.imageContainer}>
 						{ selectedImage?
@@ -70,7 +76,7 @@ export default function SetProfile({navigation}) {
 				<Text style={styles.countInput}>{number}</Text>
 				<TouchableOpacity onPress={()=>{
 				navigation.navigate('Main');}} style={styles.buttonInput}>
-					<MaterialIcons name="arrow-forward" size={24} color="#A7A7A7"/>
+					<MaterialIcons name="arrow-forward" size={24} color="#FFF"/>
 				</TouchableOpacity>
 			</View>
 			<Modal animationType="slide" transparent={true} visible={modalVisible}>
@@ -104,104 +110,4 @@ export default function SetProfile({navigation}) {
 	)
 }
 
-const styles = StyleSheet.create({
-	Content: {
-		flex: 1,
-		backgroundColor: '#272B35',
-		flexDirection: 'column',
-	},
-	containrImageDesc: {
-		width: '80%',
-		flexDirection: 'row',
-		alignSelf: 'center',
-		paddingTop: '25%',
-		alignItems: 'center'
-	},
-	imageContainer: {
-		width: 100,
-		height: 100,
-		marginRight: 15,
-		borderRadius: 50,
-		backgroundColor: '#C2C2C2',
-		alignItems: 'center',
-		justifyContent: 'space-around'
-	},
-	iconAddImage: {
-		position: 'absolute',
-		alignSelf: 'flex-end',
-		top: 70,
-		right: -8
-	},
-	textDesc: {
-		width: '55%',
-		height: 'auto',
-		color: '#A7A7A7',
-		fontSize: 17,
-		lineHeight: 22
-	},
-	countInput:{
-		position: 'absolute',
-		color: '#A7A7A7',
-		fontSize: 14,
-		right: '25%',
-		top: 14
-	},
-	buttonInput: {
-		position: 'absolute',
-		height: 48,
-		width: 62,
-		alignSelf: 'flex-end',
-		borderTopRightRadius: 5,
-		borderBottomRightRadius: 5,
-		backgroundColor: '#111',
-		justifyContent: 'space-around',
-		alignItems: 'center',
-	},
-	thumbnail: {
-		width: '100%',
-		height: '100%',
-		resizeMode: 'contain',
-		borderRadius: 100,
-	},
-
-	cardImage: {
-		flex: 1,
-		justifyContent: "center",
-		alignItems: "center",
-		marginTop: 22,
-  },
-  modalView: {
-		width: 230,
-		height: 175,
-		bottom: 154,
-		backgroundColor: '#363B54',
-		borderRadius: 8,
-		padding: 10,
-		justifyContent: 'space-around',
-		alignItems: "center",
-		shadowColor: "#000",
-		shadowOffset: {
-		width: 0,
-		height: 2
-  },
-		shadowOpacity: 0.25,
-		shadowRadius: 3.84,
-		elevation: 5
-  },
-  listItem: {
-		width: '100%',
-		height: '32%',
-		borderRadius: 5,
-  },
-  containerImageOptions: {
-		flex: 1,
-		paddingHorizontal: 20,
-		flexDirection: 'row',
-		alignItems: 'center',
-  },
-  TextImageOptions: {
-		color: '#FFFFFF',
-		fontSize: 18,
-		opacity: 0.7
-  },
-})
+const styles = StyleSheet.create(setprofileStyles);

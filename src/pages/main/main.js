@@ -87,8 +87,10 @@ function Main() {
         initialRegion={currentRegion}
         style={styles.map}
         customMapStyle={Mapstyle}
-        showsMyLocationButton={true}
+        showsMyLocationButton={false}
+        showsCompass={false}
         showsUserLocation={true}
+        minZoomLevel={7}
       >
         {satiros.localizarSatiros()}
       </MapView>
@@ -97,7 +99,7 @@ function Main() {
       </View>
       <View style={[styles.extraMap, { opacity: opacity }]}>
         <TouchableHighlight onPress={() => {}} style={styles.touchable}>
-          <MaterialIcons name="search" size={25} color="#9BAED4" />
+          <MaterialIcons name="search" size={25} color="#f8295f" />
         </TouchableHighlight>
         <TouchableHighlight
           onPress={() => {
@@ -110,7 +112,7 @@ function Main() {
           }}
           style={styles.touchable2}
         >
-          <MaterialIcons name="my-location" size={25} color="#9BAED4" />
+          <MaterialIcons name="my-location" size={25} color="#f8295f" />
         </TouchableHighlight>
       </View>
       <ScrollView

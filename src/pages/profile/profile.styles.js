@@ -71,7 +71,6 @@ module.exports = {
         height: '50%',
         backgroundColor: 'red',
         bottom: 0,
-     
     },
     card2: {
         position: 'absolute',

@@ -1,7 +1,7 @@
 module.exports = {
     Content: {
         flex: 1,
-        backgroundColor: '#272B35',
+        backgroundColor: '#0B0D19',
         alignItems: 'center',
         flexDirection: 'column'
     },
@@ -10,15 +10,21 @@ module.exports = {
         top: '10%',
     },
     containerLogo: {
-        backgroundColor: '#000',
         width: 130,
         height: 130,
         alignSelf: 'center'
     },
     topDesc: {
-        color: '#A7A7A7',
+        color: '#F4F3F8',
         fontSize: 18,
-        marginTop: '12%'
+        textAlign: 'center'
+    },
+    line: {
+        width: 100,
+        height: 2,
+        backgroundColor: '#F8295F',
+        alignSelf: 'center',
+        marginVertical: '4%',
     },
     picker: {
         width: '100%',
@@ -54,13 +60,18 @@ module.exports = {
         color: '#C1C1C1',
     },
     containerButton: {
-        top: '13%',
+        top: '20%',
         width: '100%'
+    },
+    buttonDesc: {
+        top: '19.5%',
+        color: '#F4F3F8',
+        fontSize: 9,
     },
     button: {
         width: '58%',
         height: 47,
-        backgroundColor: '#111',
+        backgroundColor: '#F8295F',
         justifyContent: 'space-around',
         borderRadius: 10,
         alignItems: 'center',

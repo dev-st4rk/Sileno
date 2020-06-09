@@ -5,7 +5,10 @@ from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 
 import InputComponent from '../../components/Input';
+import Triangles from '../../components/trianglesComponent';
 import registerStyle from './register.styles';
+
+import Logo from '../../components/sileno';
 
 export default function Register({navigation}) {
     const [countries, setCountries] = useState([]);
@@ -28,11 +31,28 @@ export default function Register({navigation}) {
     return (
         <View style={styles.Content}>
             <KeyboardAvoidingView style={styles.containerForm} behavior="position">
-                <View style={styles.containerLogo}/>
-                <Text style={styles.topDesc}>
-                    O Sileno enviará um SMS para verificar o seu número de telefone. 
-                    Insira o código de país e o número do seu telefone:
-                </Text>
+                <Triangles/>
+                <Logo color='#F8295F' size={130} style={styles.containerLogo}/>
+                <View style={{marginTop: '12%'}}>
+                    <View style={{flexDirection: 'row', alignSelf: 'center',  width: '66%'}}>
+                        <Text style={styles.topDesc}>
+                            Preparado para o 
+                        </Text>
+                        <Text style={[styles.topDesc, {marginLeft: 5, color: '#F8295F'}]}>
+                            Sileno
+                        </Text>
+                        <Text style={styles.topDesc}>
+                            ?
+                        </Text>
+                    </View>
+                    <View style={styles.line}/>
+                    <Text style={styles.topDesc}>
+                        Para criar sua conta, usaremos seu número de telefone, tudo bem?
+                    </Text>
+                    <Text style={styles.topDesc}>
+                        Digita ele aí pra gente!
+                    </Text>
+                </View>
                 <View style={styles.picker}>
                 <Picker
                     mode='dialog'
@@ -69,17 +89,16 @@ export default function Register({navigation}) {
                     </View>
                 </View>
             </KeyboardAvoidingView>
+            <Text style={styles.buttonDesc}>
+                *Tarifas de SMS de sua operadora podem ser aplicadas
+            </Text>
             <View style={styles.containerButton}>
                 <TouchableOpacity onPress={() => {setAlertVisible(true);}}>
                     <View style={styles.button}>
-                        <Text style={{color: '#FFF', fontSize: 16}}>VERIFICAR</Text>
+                        <Text style={{color: '#FFF', fontSize: 16, fontWeight: 'bold'}}>Tudo pronto, verificar!</Text>
                     </View>
                 </TouchableOpacity>
             </View>
-            <Text style={[styles.topDesc, {color: '#757575', width: '70%', alignItems: 'center',
-            marginTop: '30%'}]}>
-                Tarifas de SMS de sua operadora podem ser aplicadas
-            </Text>
             {/* ===================filter and card=================== */}
             {alertVisible ? 
                 <>

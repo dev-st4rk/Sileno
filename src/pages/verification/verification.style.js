@@ -1,7 +1,7 @@
 module.exports = {
     Content: {
         flex: 1,
-        backgroundColor: '#272B35',
+        backgroundColor: '#0B0D19',
         alignItems: 'center',
         flexDirection: 'column'
     },
@@ -10,7 +10,6 @@ module.exports = {
         top: '10%',
     },
     containerLogo: {
-        backgroundColor: '#000',
         width: 130,
         height: 130,
         alignSelf: 'center'
@@ -26,7 +25,7 @@ module.exports = {
         alignSelf: 'flex-end',
         borderTopRightRadius: 5,
         borderBottomRightRadius: 5,
-        backgroundColor: '#111',
+        backgroundColor: '#F8295F',
         justifyContent: 'space-around',
         alignItems: 'center'
     }
