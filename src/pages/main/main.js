@@ -17,7 +17,7 @@ import { TouchableHighlight, TextInput } from "react-native-gesture-handler";
 import { MaterialIcons } from "@expo/vector-icons";
 
 import SearchBar from "../../components/searchInput";
-
+import Icon from "react-native-vector-icons/FontAwesome";
 import Mapstyle from "../../components/mapbox/MapStyle.json";
 import MapSlide from "../../components/mapbox/MapSlide.json";
 import mapboxModule from "../../components/mapbox/controller.js";
@@ -97,7 +97,17 @@ function Main() {
       </View>
       <View style={[styles.extraMap, { opacity: opacity }]}>
         <TouchableHighlight onPress={() => {}} style={styles.touchable}>
-          <MaterialIcons name="search" size={25} color="#9BAED4" />
+        <Icon
+                  name="search"
+                  size={20}
+                  color={"#f8295f"}
+                  style={{
+                    textShadowColor: "#f8295f",
+                    shadowOpacity: 10,
+                    textShadowRadius: 10,
+                    textShadowOffset: { width: 0, height: 0 },
+                  }}
+                />
         </TouchableHighlight>
         <TouchableHighlight
           onPress={() => {
@@ -110,7 +120,17 @@ function Main() {
           }}
           style={styles.touchable2}
         >
-          <MaterialIcons name="my-location" size={25} color="#9BAED4" />
+          <Icon
+                  name="location-arrow"
+                  size={20}
+                  color={"#f8295f"}
+                  style={{
+                    textShadowColor: "#f8295f",
+                    shadowOpacity: 10,
+                    textShadowRadius: 10,
+                    textShadowOffset: { width: 0, height: 0 },
+                  }}
+                />
         </TouchableHighlight>
       </View>
       <ScrollView
