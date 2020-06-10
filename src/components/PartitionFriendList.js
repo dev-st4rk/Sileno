@@ -5,10 +5,10 @@ import primaryColor from '../visual.json';
 
 // import { Container } from './styles';
 
-const PartitionFriendList = () => {
+const PartitionFriendList = (props) => {
     return(
         <View style={styles.containerPartition}>
-             <Text style={{fontSize: 16, color: primaryColor.themeColor}}>A</Text>
+             <Text style={{fontSize: 16, color: primaryColor.themeColor}}>{props.letra}</Text>
         <View style={styles.letterContainerList}>
            
         </View>

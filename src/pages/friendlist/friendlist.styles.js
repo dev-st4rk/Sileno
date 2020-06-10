@@ -16,10 +16,10 @@ module.exports = {
         justifyContent: "space-between"
     },
     pageRoutes: {
-        width: '55%',
+        width: '60%',
         flexDirection: 'row',
         justifyContent: 'space-between',
-        top: 100,
+        marginTop: 20,
         alignSelf: 'center'
 
     },
@@ -28,16 +28,17 @@ module.exports = {
         height: 3,
         backgroundColor: primaryColor.themeColor,
         alignSelf: 'center',
+        marginTop:10,
         marginBottom: 20,
-        shadowColor: primaryColor.themeColor,
+        shadowColor:'red',
         shadowOffset: {
-            width: 0,
-            height: 2,
+            width: 10,
+            height: 10,
         },
-        shadowOpacity: 0.25,
-        shadowRadius: 3.84,
+        shadowOpacity: 1,
+        shadowRadius: 10,
 
-        elevation: 5,
+        elevation: 6,
     },
     divisor: {
         position: 'absolute',
@@ -45,7 +46,7 @@ module.exports = {
         height: '51%',
         left: -2,
         backgroundColor: '#0B0D19',
-        top: 190,
+        top: 20,
         transform: [{
             rotate: "-4deg"
         }],
@@ -68,13 +69,12 @@ module.exports = {
         color: '#A1A1A1'
     },
     searchContainer: {
-        position: 'absolute',
+        alignSelf:'center',
+        width:'80%',
         flex: 1,
         flexDirection: 'column',
         justifyContent: 'space-between',
-        top: 145,
-        left: 20,
-        right: 20,
+       
     },
     imageTop: {
         opacity: 0.7,
@@ -94,6 +94,8 @@ module.exports = {
         left: 40,
     },
     friendsView: {
+        backgroundColor:'blue',
+        flex:1,
         width: '100%',
         height: '100%',
         elevation: 2,

@@ -17,7 +17,7 @@
         "paletaTabbar":{
             "corDeFundo":"#0C0F1D",
             "itemAtivo":"#f8295f",
-            "itemInativo":"#6A0028"
+            "itemInativo":"#666666"
         },
         "mapa":{
             "cor":"mapbox://styles/qun4ntumt/ck390137d3lta1dnvs5u9428r"

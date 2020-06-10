@@ -9,7 +9,7 @@ import { MaterialIcons } from "@expo/vector-icons";
 
 import Register from "./pages/register/register";
 import Verification from "./pages/verification/verification";
-import Icon from "react-native-vector-icons/FontAwesome";
+import Icon from "react-native-vector-icons/FontAwesome5";
 import Main from "./pages/main/main";
 import Profile from "./pages/profile/profile";
 import Friends from "./pages/friendlist/friendlist.js";
@@ -45,8 +45,8 @@ const Routes = createBottomTabNavigator(
                 style={{ alignItems: "center", justifyContent: "flex-end" }}
               >
                 <Icon
-                  name="user"
-                  size={25}
+                  name="user-friends"
+                  size={20}
                   color={tintColor}
                   style={{
                     textShadowColor: "#f8295f",
@@ -76,12 +76,12 @@ const Routes = createBottomTabNavigator(
               <View
                 style={{ alignItems: "center", justifyContent: "flex-end" }}
               >
-                <Icon name="user-o" size={25} color={tintColor} style={{}} />
-                <View>
+                <Icon name="user-friends" size={20} color={tintColor} style={{}} />
+                {/* <View>
                   <Text style={{ color: tintColor, fontSize: 10 }}>
                   social
                   </Text>
-                </View>
+                </View> */}
               </View>
             );
         },
@@ -108,8 +108,8 @@ const Routes = createBottomTabNavigator(
                 style={{ alignItems: "center", justifyContent: "flex-end" }}
               >
                 <Icon
-                  name="lock"
-                  size={25}
+                  name="cubes"
+                  size={20}
                   color={tintColor}
                   style={{
                     textShadowColor: "#f8295f",
@@ -139,12 +139,12 @@ const Routes = createBottomTabNavigator(
               <View
                 style={{ alignItems: "center", justifyContent: "flex-end" }}
               >
-                <Icon name="lock" size={25} color={tintColor} style={{}} />
-                <View>
+                <Icon name="cubes" size={20} color={tintColor} style={{}} />
+                {/* <View>
                   <Text style={{ color: tintColor, fontSize: 10 }}>
                     aplicativos
                   </Text>
-                </View>
+                </View> */}
               </View>
             );
         },
@@ -177,7 +177,7 @@ const Routes = createBottomTabNavigator(
               <View
                 style={{ alignItems: "center", justifyContent: "flex-end" }}
               >
-                <Logo color={tintColor} />
+                <Logo color={tintColor} size={30} />
               </View>
             );
         },
@@ -204,8 +204,8 @@ const Routes = createBottomTabNavigator(
                 style={{ alignItems: "center", justifyContent: "flex-end" }}
               >
                 <Icon
-                  name="moon-o"
-                  size={25}
+                  name="fire"
+                  size={20}
                   color={tintColor}
                   style={{
                     textShadowColor: "#f8295f",
@@ -235,12 +235,12 @@ const Routes = createBottomTabNavigator(
               <View
                 style={{ alignItems: "center", justifyContent: "flex-end" }}
               >
-                <Icon backgroundColor={tintColor} name="moon-o" fill={tintColor} size={25} color={tintColor} style={{}} />
-                <View>
+                <Icon backgroundColor={tintColor} name="fire" fill={tintColor} size={20} color={tintColor} style={{}} />
+                {/* <View>
                   <Text style={{ color: tintColor, fontSize: 10 }}>
                     noite
                   </Text>
-                </View>
+                </View> */}
               </View>
             );
         },
@@ -305,9 +305,9 @@ const Routes = createBottomTabNavigator(
               }}
               source={{ uri: "https://www.thispersondoesnotexist.com/image" }}
             />
-            <View>
+            {/* <View>
               <Text style={{ color: tintColor, fontSize: 10 }}>perfil</Text>
-            </View>
+            </View> */}
           </View>
             );
         },
@@ -337,9 +337,9 @@ const Routes = createBottomTabNavigator(
 
 const RegisterProcess = createStackNavigator(
   {
-    Register: Register,
-    Verification: Verification,
-    setProfile: setProfile,
+    // Register: Register,
+    // Verification: Verification,
+    // setProfile: setProfile,
     Main: Routes,
   },
   {
