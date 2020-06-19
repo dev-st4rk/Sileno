@@ -4,7 +4,7 @@ module.exports = {
 		backgroundColor: '#0B0D19',
 		flexDirection: 'column',
 	},
-	containrImageDesc: {
+	containerImageDesc: {
 		width: '80%',
 		flexDirection: 'row',
 		alignSelf: 'center',
@@ -68,7 +68,7 @@ module.exports = {
 		width: 230,
 		height: 175,
 		bottom: 154,
-		backgroundColor: '#363B54',
+		backgroundColor: '#0B0D19',
 		borderRadius: 8,
 		padding: 10,
 		justifyContent: 'space-around',
@@ -98,4 +98,21 @@ module.exports = {
 		fontSize: 18,
 		opacity: 0.7
   },
+	circle: { 
+		borderWidth: 5,
+		borderRadius: 50,
+		borderColor: '#F8295F',
+		height: 70,
+		width:70,
+		justifyContent: 'center',
+		alignItems: 'center'
+	},
+	circleInside: {
+		borderWidth: 2,
+		borderRadius: 50,
+		borderColor: '#EDEDED',
+		height: 55,
+		width:55,
+		backgroundColor: '#FFF'
+		}
 }

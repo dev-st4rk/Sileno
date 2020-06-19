@@ -339,7 +339,7 @@ const RegisterProcess = createStackNavigator(
   {
     // Register: Register,
     // Verification: Verification,
-    // setProfile: setProfile,
+    setProfile: setProfile,
     Main: Routes,
   },
   {

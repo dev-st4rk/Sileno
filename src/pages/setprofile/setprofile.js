@@ -1,7 +1,17 @@
 import React, { useState } from 'react'
-import { StyleSheet, Text, View, TouchableOpacity, Image, Modal, TouchableHighlight } from 'react-native'
+import { 
+	StyleSheet,
+	Text, 
+	View, 
+	TouchableOpacity, 
+	Image, Modal, 
+	TouchableHighlight, 
+	Dimensions } from 'react-native'
 import { MaterialIcons } from '@expo/vector-icons';
+import { Ionicons } from '@expo/vector-icons';
 import * as ImagePicker from 'expo-image-picker';
+import { Camera } from 'expo-camera';
+import * as ImageManipulator from "expo-image-manipulator";
 
 import InputComponent from '../../components/Input';
 
@@ -13,6 +23,9 @@ export default function SetProfile({navigation}) {
 	const [number, setNumber] = useState(25);
 	const [modalVisible, setModalVisible] = useState(false); //state to show or hidden modal
 	let [selectedImage, setSelectedImage] = React.useState(null); //state for the camera roll
+	const [hasPermission, setHasPermission] = useState(null);
+  const [cameraRef, setCameraRef] = useState(null)
+  const [type, setType] = useState(Camera.Constants.Type.back);
 
 	let openImagePickerAsync = async () => { //function for select or not camera process
 	setModalVisible(!modalVisible); //here the modal is hidden automatically
@@ -37,12 +50,72 @@ export default function SetProfile({navigation}) {
 	setSelectedImage({ localUri: pickerResult.uri });
 	};
 
+	let openCameraAsync = async () => {
+		setModalVisible(!modalVisible);
+		const { status } = await Camera.requestPermissionsAsync();
+    setHasPermission(status === 'granted');
+
+		if (hasPermission === null) {
+    return <View />;
+		}
+
+		if (hasPermission === false) {
+			return <Text>No access to camera</Text>;
+		}
+	}
+
+	const windowWidth = Dimensions.get('window').width;
+	const windowHeight = Dimensions.get('window').height;
+
 	return (
 		<View style={styles.Content}>
-			<View style={{top: '15%'}}>
+			{ hasPermission?
+					<View style={{ backgroundColor: '#0B0D19', paddingTop: '10%'}}>
+						<View style={{flexDirection: 'row', alignItems: 'center'}}>
+							<TouchableOpacity onPress={() => {setHasPermission(!hasPermission);}}>
+								<Ionicons name="md-close" size={36} color="#FFF" style={{marginLeft: '20%'}}/>
+							</TouchableOpacity>
+							<Text style={{color: '#FFF', fontSize: 22, marginLeft: '14%'}}>Camera</Text>
+						</View>
+						<Camera 
+						style={{ width: windowWidth, height: windowHeight/1.7, marginTop: '4%'}}
+						type={type}
+						ref={ref => { setCameraRef(ref) ; }}
+						ratio={'3:3'}/>
+						<View style={{flexDirection: 'row', justifyContent: 'space-around',
+						alignItems: 'center', marginTop: '15%'}}>
+							<TouchableOpacity>
+								<Ionicons name="ios-flash" size={40} color="#FFF"/>
+							</TouchableOpacity>
+							<TouchableOpacity style={{alignSelf: 'center'}} onPress={async() => {
+							if(cameraRef){
+								let photo = await cameraRef.takePictureAsync();
+								setSelectedImage({ localUri: photo.uri });
+								setHasPermission(!hasPermission);
+								}
+							}}>
+								<View style={styles.circle}>
+									<View style={styles.circleInside}/>
+								</View>
+							</TouchableOpacity>
+							<TouchableOpacity style={{ }}
+							onPress={() => {
+								setType(
+									type === Camera.Constants.Type.back
+										? Camera.Constants.Type.front
+										: Camera.Constants.Type.back
+								);
+							}}>
+								<Ionicons name="ios-reverse-camera" size={40} color="#FFF"/>
+							</TouchableOpacity>
+						</View>
+					</View>
+			:
+			<>
+				<View style={{top: '15%'}}>
 				<Triangles/>
 			</View>
-			<View style={styles.containrImageDesc}>
+			<View style={styles.containerImageDesc}>
 					<View style={styles.imageContainer}>
 						{ selectedImage?
 						<>
@@ -83,7 +156,7 @@ export default function SetProfile({navigation}) {
 					<View style={styles.cardImage}>
 						<View style={styles.modalView}>
 							{/* ////////////////////Tirar Foto//////////////////// */}
-							<TouchableHighlight onPress={()=>{}} style={styles.listItem} activeOpacity={0.8} 
+							<TouchableHighlight onPress={openCameraAsync} style={styles.listItem} activeOpacity={0.8} 
 							underlayColor="#61657B">
 								<View style={styles.containerImageOptions}>
 									<Text style={styles.TextImageOptions}>Tirar Foto</Text>
@@ -106,6 +179,8 @@ export default function SetProfile({navigation}) {
 						</View>
 					</View>
 			</Modal>
+			</>
+			}
 		</View>
 	)
 }
