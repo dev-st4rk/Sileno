@@ -25,7 +25,8 @@ export default function SetProfile({navigation}) {
 	let [selectedImage, setSelectedImage] = React.useState(null); //state for the camera roll
 	const [hasPermission, setHasPermission] = useState(null);
   const [cameraRef, setCameraRef] = useState(null)
-  const [type, setType] = useState(Camera.Constants.Type.back);
+  const [type, setType] = useState(Camera.Constants.Type.front);
+	const [flash, setFlash] = useState(Camera.Constants.FlashMode.on)
 
 	let openImagePickerAsync = async () => { //function for select or not camera process
 	setModalVisible(!modalVisible); //here the modal is hidden automatically
@@ -81,11 +82,22 @@ export default function SetProfile({navigation}) {
 						style={{ width: windowWidth, height: windowHeight/1.7, marginTop: '4%'}}
 						type={type}
 						ref={ref => { setCameraRef(ref) ; }}
+						flashMode={flash}
 						ratio={'3:3'}/>
 						<View style={{flexDirection: 'row', justifyContent: 'space-around',
 						alignItems: 'center', marginTop: '15%'}}>
-							<TouchableOpacity>
-								<Ionicons name="ios-flash" size={40} color="#FFF"/>
+							<TouchableOpacity onPress={() => {
+								setFlash(
+									flash === Camera.Constants.FlashMode.on
+										? Camera.Constants.FlashMode.off
+										: Camera.Constants.FlashMode.on
+								);
+							}}>
+								{
+									flash === Camera.Constants.FlashMode.on
+										? <Ionicons name="ios-flash" size={40} color="#FFF"/>
+										: <Ionicons name="ios-flash" size={40} color="#FFF" style={{opacity: 0.3}}/>
+								}
 							</TouchableOpacity>
 							<TouchableOpacity style={{alignSelf: 'center'}} onPress={async() => {
 							if(cameraRef){
