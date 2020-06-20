@@ -42,7 +42,7 @@ npm install expo-cli --global
     - [ ]  Verificar se o código inserido está correto
     - [ ]  Reenviar o código novamente caso requisitado (1:30 delay)
     - [x]  Inserção de imagem da galeria
-    - [ ]  Inserção de imagem da câmera (tirar foto)
+    - [x]  Inserção de imagem da câmera (tirar foto)
     - [ ]  Verificações no Input de Nome do usuário
 -  Perfil
     - [ ]  Importar Lista de amigos
@@ -75,7 +75,7 @@ npm install expo-cli --global
     - [ ]  Adicionar novo contato
 	- [ ]  Lista de sátiros
     - [ ]  Localização do sátiro ao clicar
-	- [ ]  Lista de contatos
+	- [x]  Lista de contatos
     - [x]  Listar contatos
     - [ ]  Bloquear contato
 	- [ ]  Leitor Qr code
@@ -103,7 +103,7 @@ npm install expo-cli --global
     - [ ]  Animação do logo ao carregar
 
 #### Extra Página
-- [ ]  Adicionar SVGs
+- [x]  Adicionar SVGs
 - [x]  Tabbar
 
 
