@@ -342,7 +342,7 @@ const RegisterProcess = createStackNavigator(
     // Register: Register,
     // Verification: Verification,
     // setProfile: setProfile,
-    QrCodeGen: Routes,
+    Friends: Routes,
   },
   {
     headerMode: tabbarConfigs.tabbar.config.stackNavigatorConfigs.cabecalhoApp, // retira o header do aplicativo - uma parte branca que não usamos

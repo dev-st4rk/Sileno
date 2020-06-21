@@ -99,41 +99,8 @@ export default function FriendList({ navigation }) {
               name="Andrew Richard"
               description="Architect, New York"
               status="online"
-            />
-            <ItemFriend
-              name="Andrew Richard"
-              description="Architect, New York"
-              status="online"
-            />
-            <ItemFriend
-              name="Andrew Richard"
-              description="Architect, New York"
-              status="online"
-            />
-            <ItemFriend
-              name="Andrew Richard"
-              description="Architect, New York"
-              status="online"
-            />
-            <ItemFriend
-              name="Andrew Richard"
-              description="Architect, New York"
-              status="online"
-            />
-            <ItemFriend
-              name="Andrew Richard"
-              description="Architect, New York"
-              status="online"
-            />
-            <ItemFriend
-              name="Andrew Richard"
-              description="Architect, New York"
-              status="online"
-            />
-            <ItemFriend
-              name="Andrew Richard"
-              description="Architect, New York"
-              status="online"
+              onSwipeFromLeft={() => alert('swiped from left!')}
+              onRightPress={() => alert('pressed right!')}
             />
           </View>
         </View>
