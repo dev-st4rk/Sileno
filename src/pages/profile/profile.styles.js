@@ -67,7 +67,7 @@ module.exports = {
         position: 'absolute',
 
         width: '100%',
-        height: '50%',
+        height: '45%',
         backgroundColor: '#0B0D19',
         bottom: 0,
         elevation:5,
@@ -83,7 +83,7 @@ module.exports = {
     card2: {
         position: 'absolute',
         width: '110%',
-        height: '51%',
+        height: '46%',
         left: -2,
         backgroundColor: '#0B0D19',
         bottom: 20,
@@ -91,7 +91,6 @@ module.exports = {
             rotate: "-4deg"
         }],
         borderWidth: 3,
-            borderRadius: 2,
             borderColor: '#f8295f',
             borderBottomWidth: 0,
             shadowColor: '#f8295f',
@@ -111,7 +110,7 @@ module.exports = {
     },
     containerScroll: {
         height: '56%',
-        top: '25%'
+        marginTop: '23%'
     },
     cardImage: {
         flex: 1,

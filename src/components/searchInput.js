@@ -3,23 +3,25 @@ import { View, TextInput, StyleSheet } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 
 
-export default class cmponents extends Component {
-    render() {
-        return(
-            <View>
-                <TextInput
-                style={styles.searchInput}
-                placeholder="Buscar localizações, Sátiros..."
-                placeholderTextColor="#FFF"
-                autoCapitalize="words"
-                autoCorrect={false}>
-                </TextInput>
-                <MaterialIcons name="search" size={30} color="#ECECEC" style={styles.Icon} />
-            </View>
-        );
-        
-    }
+const searchInput = (props) => {
+	return(
+		<View>
+			<TextInput
+			style={styles.searchInput}
+			placeholder="Buscar localizações, Sátiros..."
+			placeholderTextColor="#FFF"
+			autoCapitalize="words"
+			onFocus={props.onFocus}
+			onBlur={props.onBlur}
+            onEndEditing={props.onEndEditing}
+			autoCorrect={false}>
+			</TextInput>
+			<MaterialIcons name="search" size={30} color="#ECECEC" style={styles.Icon} />
+		</View>
+	);
 }
+
+export default searchInput;
 
 const styles = StyleSheet.create({
     searchInput: {

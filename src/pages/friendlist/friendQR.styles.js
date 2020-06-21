@@ -72,6 +72,6 @@ module.exports = {
         alignItems: 'center'
     },
     bottomSubtitle: {
-        color: '#FFF',
+        color: '#f8295f',
     }
 }

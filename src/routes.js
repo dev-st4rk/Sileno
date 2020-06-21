@@ -15,6 +15,7 @@ import Profile from "./pages/profile/profile";
 import Friends from "./pages/friendlist/friendlist.js";
 
 import QrCode from "./pages/friendlist/friendQr";
+import QrCodeGen from "./pages/profile/userQR";
 import White from "./pages/white/white";
 import Night from "./pages/night/night";
 import Logo from './components/sileno';
@@ -251,6 +252,7 @@ const Routes = createBottomTabNavigator(
         {
           Profile,
           QrCode,
+          QrCodeGen,
           Friends,
           ContactsList,
         },
@@ -339,8 +341,8 @@ const RegisterProcess = createStackNavigator(
   {
     // Register: Register,
     // Verification: Verification,
-    setProfile: setProfile,
-    Main: Routes,
+    // setProfile: setProfile,
+    QrCodeGen: Routes,
   },
   {
     headerMode: tabbarConfigs.tabbar.config.stackNavigatorConfigs.cabecalhoApp, // retira o header do aplicativo - uma parte branca que não usamos

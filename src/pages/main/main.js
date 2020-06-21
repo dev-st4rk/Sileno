@@ -23,8 +23,9 @@ import MapSlide from "../../components/mapbox/MapSlide.json";
 import mapboxModule from "../../components/mapbox/controller.js";
 import satiros from "../../components/satiros/list.js";
 import mainStyle from "./main.styles.js";
-var styleJaja = mainStyle;
+
 var map;
+var userCoords;
 const images = [
   "https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
   "https://images.pexels.com/photos/2034851/pexels-photo-2034851.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
@@ -32,7 +33,6 @@ const images = [
   "https://images.pexels.com/photos/1601775/pexels-photo-1601775.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
   "https://images.pexels.com/photos/261043/pexels-photo-261043.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
 ];
-var userCoords;
 
 function Main() {
   const [currentRegion, setCurrentRegion] = useState(null); //currentRegion = novo estado, setCurrentRegion = metodo para a atualização dos valores
@@ -116,7 +116,6 @@ function Main() {
         </TouchableHighlight>
       </View>
       <ScrollView
-        pagingEnabled
         horizontal
         style={[styles.scrollCards, { opacity: opacity }]}
         showsHorizontalScrollIndicator={false}
@@ -148,6 +147,6 @@ function Main() {
   );
 }
 
-const styles = StyleSheet.create(styleJaja);
+const styles = StyleSheet.create(mainStyle);
 
 export default Main;

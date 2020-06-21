@@ -41,9 +41,7 @@ function friendQr({ navigation }) {
             />
     {scanned && <Button title={'Tap to Scan Again'} onPress={() => setScanned(false)} />}
             <View style={styles.topBar}>
-                <TouchableOpacity onPress={()=>{
-                            navigation.navigate('Profile');
-                            }}>
+                <TouchableOpacity onPress={()=>{ navigation.navigate('Profile');}}>
                     <MaterialIcons name="chevron-left" size={50} color="#fff"/>
                 </TouchableOpacity>
                 <Text style={styles.topTitle}>Leitor QR</Text>
@@ -65,8 +63,9 @@ function friendQr({ navigation }) {
                     </View>  
             </View>
             <View style={styles.bottomContainer}>
-                <TouchableOpacity onPress={()=>{}} style={{alignItems: 'center'}}>
-                    <MaterialCommunityIcons name="qrcode" size={35} color="#fff"/>
+                <TouchableOpacity onPress={()=>{navigation.navigate('QrCodeGen');}}
+                style={{alignItems: 'center'}}>
+                    <MaterialCommunityIcons name="qrcode" size={35} color="#f8295f"/>
                     <Text style={styles.bottomSubtitle}>Meu QR Code</Text>
                 </TouchableOpacity>
             </View>
