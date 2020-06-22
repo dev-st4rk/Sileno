@@ -58,7 +58,7 @@ npm install expo-cli --global
     - [ ]  Traçar rota noite anterior
     - [ ]  Mostrar localização do estabelecimento
     - [x]  Criar cards de estabelecimento
-    - [ ]  Encaminhar do card para a localização
+    - [x]  Encaminhar do card para a localização
 - Configurações
     - [ ]  Alterar o tema do aplicativo
     - [ ]  Termos de uso
@@ -74,14 +74,14 @@ npm install expo-cli --global
     - [ ]  Opção de Bloquear
     - [ ]  Adicionar novo contato
 	- [ ]  Lista de sátiros
-    - [ ]  Localização do sátiro ao clicar
+    - [x]  Localização do sátiro ao arrastar
 	- [x]  Lista de contatos
     - [x]  Listar contatos
-    - [ ]  Bloquear contato
-	- [ ]  Leitor Qr code
+    - [x]  Bloquear contato
+	- [x]  Leitor Qr code
     - [x]  Ler Qr code
     - [ ]  Ao ler encaminhar a adicionar aos contatos (nativo)
-    - [ ]  Gerar Qr code
+    - [x]  Gerar Qr code
 	- [ ]  Edição do perfil
     - [ ]  Editar imagem de perfil/wallpaper
     - [ ]  Editar Nome/Desc
