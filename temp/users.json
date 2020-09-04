@@ -1,0 +1,74 @@
+{
+  "user":[
+    {
+      "user_id": "0",
+      "name": "Giovanna Alessandra Barbosa",
+      "phone": "(68) 98371-8709",
+      "image": "https://images.unsplash.com/photo-1520634222887-a2baa539fab3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      "description": "Desenvolvedora, Santos-Sp"
+    },
+    {
+      "user_id": "1",
+      "name": "Gabrielly Esther Flávia Carvalho",
+      "phone": "(31) 99446-1251",
+      "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      "description": "Dentista, amante de gatos"
+    },
+    {
+      "user_id": "2",
+      "name": "Manoel Mário Gustavo Farias",
+      "phone": "(85) 98594-8911",
+      "image": "https://images.unsplash.com/photo-1504117127609-caf7142e6f67?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      "description": "Para ser insubstituível você deverá ser sempre diferente."
+    },
+    {
+      "user_id": "3",
+      "name": "Simone Helena Tânia Peixoto",
+      "phone": "(27) 98102-7864",
+      "image": "https://images.unsplash.com/photo-1590666027616-38e0283eb6c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
+      "description": "Uma mulher não deve aceitar; ela deve desafiar. -Margaret Sanger"
+    },
+    {
+      "user_id": "4",
+      "name": "Nicolas Fábio Lucas Pereira",
+      "phone": "(63) 98976-4421",
+      "image": "https://images.unsplash.com/photo-1540839183404-d918d8de7c71?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      "description": "Coma, durma, procrastine, se arrependa, repita. 😎"
+    },
+    {
+      "user_id": "5",
+      "name": "Luzia Isis Laís Almeida",
+      "phone": "(19) 98130-9838",
+      "image": "https://images.unsplash.com/photo-1541516160071-4bb0c5af65ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
+      "description": "Fotógrafa de Santos-SP"
+    },
+    {
+      "user_id": "6",
+      "name": "Pietro Ruan Vieira",
+      "phone": "(69) 92883-0015",
+      "image": "https://images.unsplash.com/photo-1500210701147-9eaeb52f32ac?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      "description": "Somos todos parte da estatística final… 10/10 morrem 🤔"
+    },
+    {
+      "user_id": "7",
+      "name": "Stefany Renata Pereira",
+      "phone": "(81) 93680-3321",
+      "image": "https://images.unsplash.com/photo-1582012673377-8243eea1680c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      "description": "Uma garota deve ser duas coisas: quem e o que ela quer."
+    },
+    {
+      "user_id": "8",
+      "name": "Alexandre Paulo Gonçalves",
+      "phone": "(84) 93999-8127",
+      "image": "https://images.unsplash.com/photo-1559386484-97dfc0e15539?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      "description": "A luz que ilumina o meu caminho é mais forte que os olhos que querem apagá-lo 🔥"
+    },
+    {
+      "user_id": "9",
+      "name": "Marlene Esther Rodrigues",
+      "phone": "(92) 93607-4857",
+      "image": "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      "description": "Estressada, mas cheia de estilo 😘"
+    }
+  ]
+}

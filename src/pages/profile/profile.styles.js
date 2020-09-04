@@ -15,7 +15,7 @@ module.exports = {
     containerUser: {
         position: 'absolute',
         alignSelf: 'center',
-        top: "14%",
+        top: "12%",
     },
     containerAvatar: {
         width: 60,
@@ -65,11 +65,10 @@ module.exports = {
     },
     card: {
         position: 'absolute',
-
         width: '100%',
         height: '45%',
         backgroundColor: '#0B0D19',
-        bottom: 0,
+        bottom: '3%',
         elevation:5,
         shadowColor: '#000000',
     shadowOffset: {
@@ -86,7 +85,7 @@ module.exports = {
         height: '46%',
         left: -2,
         backgroundColor: '#0B0D19',
-        bottom: 20,
+        bottom: '7%',
         transform: [{
             rotate: "-4deg"
         }],
@@ -98,19 +97,11 @@ module.exports = {
             shadowOpacity: 1,
             shadowRadius: 2,
             elevation: 1,
-
-
     },
     searchContainer: {
         position: 'absolute',
-        top: 20,
-        left: 20,
-        right: 20,
-        
-    },
-    containerScroll: {
-        height: '56%',
-        marginTop: '23%'
+        width: '90%',
+        alignSelf: 'center',
     },
     cardImage: {
         flex: 1,

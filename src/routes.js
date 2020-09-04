@@ -282,7 +282,7 @@ const Routes = createBottomTabNavigator(
                   borderWidth: tabbarConfigs.tabbar.config.iconePerfil.border,
                   borderColor: tintColor,
                 }}
-                source={{ uri: "https://www.thispersondoesnotexist.com/image" }}
+                source={{ uri: "https://images.unsplash.com/photo-1530021232320-687d8e3dba54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" }}
               />
               <View>
                 <Text style={{ color: tintColor, fontSize: 10,textShadowColor: "#f8295f",
@@ -305,7 +305,7 @@ const Routes = createBottomTabNavigator(
                 borderWidth: tabbarConfigs.tabbar.config.iconePerfil.border,
                 borderColor: tintColor,
               }}
-              source={{ uri: "https://www.thispersondoesnotexist.com/image" }}
+              source={{ uri: "https://images.unsplash.com/photo-1530021232320-687d8e3dba54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" }}
             />
             {/* <View>
               <Text style={{ color: tintColor, fontSize: 10 }}>perfil</Text>
@@ -339,10 +339,9 @@ const Routes = createBottomTabNavigator(
 
 const RegisterProcess = createStackNavigator(
   {
-    // Register: Register,
-    // Verification: Verification,
-    // setProfile: setProfile,
-    Friends: Routes,
+    Register: Register,
+    Verification: Verification,
+    setProfile: setProfile,
   },
   {
     headerMode: tabbarConfigs.tabbar.config.stackNavigatorConfigs.cabecalhoApp, // retira o header do aplicativo - uma parte branca que não usamos
@@ -356,8 +355,8 @@ const RegisterProcess = createStackNavigator(
 
 const DefaultStack = createStackNavigator(
   {
-    Register: RegisterProcess,
-    Main: Routes,
+    //Register: RegisterProcess,
+    Night: Routes,
   },
   {
     headerMode: tabbarConfigs.tabbar.config.stackNavigatorConfigs.cabecalhoApp, // retira o header do aplicativo - uma parte branca que não usamos

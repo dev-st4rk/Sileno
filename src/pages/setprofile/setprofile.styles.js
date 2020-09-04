@@ -8,7 +8,7 @@ module.exports = {
 		width: '80%',
 		flexDirection: 'row',
 		alignSelf: 'center',
-		paddingTop: '25%',
+		marginTop: '30%',
 		alignItems: 'center'
 	},
 	imageContainer: {

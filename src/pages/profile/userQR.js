@@ -15,7 +15,7 @@ export default function userQR({ navigation }) {
         <Text style={styles.pageTitle}>Código QR</Text>
       </View>
       <View style={styles.qrCard}>
-        <Image style={styles.userAvatar} source={{ uri: 'https://www.thispersondoesnotexist.com/image' }} />
+        <Image style={styles.userAvatar} source={{ uri: 'https://images.unsplash.com/photo-1530021232320-687d8e3dba54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60' }} />
         <View style={styles.infoContainer}>
           <Text style={styles.name}>Lucy Lee</Text>
           <Text style={styles.desc}>Photographer, New York</Text>
